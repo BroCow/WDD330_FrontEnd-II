@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Story Writer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="story_editor.css">
+    </head>
+    <body>
+        <h1>Story Editor</h1>
+        <input id="storyName">
+        
+        <section>
+            <button onclick="loadStory()">Find and Edit It</button>
+            <button onclick="saveStory()">Save It</button>
+            <button onclick="displayStory()">Display It</button>
+        </section>
+
+        <p id="test"></p>
+        <p id="showStoryName"></p>
+
+        <textarea id="storyText"></textarea>
+        <p id="showStoryText"></p>
+
+        <section id="story_display"></section>
+        
+        
+        <script src="story_editor.js" async defer></script>
+    </body>
+</html>

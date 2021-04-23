@@ -1,0 +1,31 @@
+
+
+#github{
+    width: 350px;
+    background-color: black;
+}
+
+#github_h3{
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#githubLogo_div{
+    text-align: center;
+}
+
+#githubLogo{
+    width: 300px;
+    margin-top: 25px;
+}
+
+#githubLink_div{
+    text-align: center;
+    position: relative;
+    bottom: 17.5px;
+}
+
+#github_link{
+    color: #78eff5;  
+}
