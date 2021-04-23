@@ -2,7 +2,7 @@
 
 // Dynamic table of contents
 const links = [
-    {label:"Week 1", link: "./wk1/"}
+    {label:"Week 1", link: "https://brocow.github.io/WDD330_FrontEnd-II/wk1/"}
 ];
 
 for(let i = 0; i < links.length; i++){

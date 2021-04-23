@@ -1,4 +1,22 @@
 
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#profilePic_section{
+    width: 350px;
+}
+
+#profilePic{
+    width: 300px;
+}
+
+#aboutMe{
+    width: 350px;
+    text-align: center;
+}
+
 
 #github{
     width: 350px;
