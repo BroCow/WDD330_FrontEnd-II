@@ -1,19 +1,50 @@
 
+
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    font-size: 3em;
+}
+
+#aboutMe{
+    background-color: lightgray;
+}
+
+h2{
+    font-size: 2em;
+}
+
+.aboutMe_p{
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 150%;
+}
+
 .container{
     display: flex;
     justify-content: space-between;
+    background-color: black;
 }
 
-#profilePic_section{
+ #profilePic_section{
     width: 350px;
 }
 
 #profilePic{
     width: 300px;
+    margin-right: 10px;
 }
 
 #aboutMe{
-    width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -34,8 +65,8 @@
 }
 
 #githubLogo{
-    width: 300px;
-    margin-top: 25px;
+    width: 200px;
+    margin-left: 10px;
 }
 
 #githubLink_div{
@@ -46,4 +77,8 @@
 
 #github_link{
     color: #78eff5;  
+}
+
+li{
+    font-size: 1.2em;
 }
