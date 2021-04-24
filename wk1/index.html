@@ -8,23 +8,32 @@
 </head>
 <body>
     <header>
-        <h1>Chris Cowan's WDD-330 Portfolio</h1>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 1</h1>
+        <div class="home_btn_div" id="wk1Home_btn_div">
+            <button class="home_btn" id="wk1Home_btn" onclick="goHome()">Portfolio Home Page</button>
+        </div>
     </header>
 
-    <div class="home_btn_div" id="wk1Home_btn_div">
-        <button class="home_btn" id="wk1Home_btn" onclick="goHome()">Portfolio Home Page</button>
-    </div>
-
     <main>
-        <h2>Week 1</h2>
-
         <section class="category_section" id="wk1Notes_section">
-            <h3 class="category_header" id="wk1Notes_header">Notes</h3>
-
-            <ol class="category_ol" id="wk1Notes_ol">
-                <li class="category_li" id="wk1Notes_li_1">Note 1</li>
-            </ol>
-
+            <div id="note_div">
+                <h1>Note It!!!</h1>
+    
+                <label id="noteDescLabel" for="noteDesc">Note Description:
+                    <input id="noteDesc">
+                </label>
+                
+                <section>
+                <textarea id="noteText" placeholder="Note it down...don't forget!"></textarea>
+                </section>
+    
+                <section class="buttons">
+                    <button id="saveNote" onclick="saveNote()">Save Note</button>
+                    <button id="hideNotes" onclick="hideAllNotes()">Hide Notes</button>
+                </section>
+            </div>
+    
+            <section id="displayNotes"></section>
         </section>
 
         <section class="category_section" id="wk1Exercises_section">
@@ -40,6 +49,12 @@
                 </li>
                 <li class="category_li" id="wk1Exercise3_li">
                     <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/choices.html">Choices</a>
+                </li>
+                <li class="category_li" id="wk1Exercise4_li">
+                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/groupsLoops.html">Groups and Loops</a>
+                </li>
+                <li class="category_li" id="wk1Exercise5_li">
+                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/noteIt.html">Note It</a>
                 </li>
             </ol>
 
