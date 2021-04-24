@@ -1,12 +1,28 @@
 
 
-body{
-    background-color: lightgray;
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
 }
 
 h1{
+    color: white;
+    font-size: 3em;
+}
+
+.home_btn{
+    margin-top: 32px;
+    margin-left: 20px;
+}
+
+body{
+    background-color: lightblue;
+}
+
+h2{
     color: rgb(65, 54, 54);
-    padding-top: 20px;
     font-size: 3em;
 }
 
