@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note It!</title>
+    <link rel="stylesheet" href="noteIt.css">
+</head>
+<body onload="showAllNotes()">
+    <main>
+        <div id="note_div">
+            <h1>Note It!!!</h1>
+
+            <label id="noteDescLabel" for="noteDesc">Note Description:
+                <input id="noteDesc">
+            </label>
+            
+            <section>
+            <textarea id="noteText" placeholder="Note it down...don't forget!"></textarea>
+            </section>
+
+            <section class="buttons">
+                <button id="saveNote" onclick="saveNote()">Save Note</button>
+                <button id="hideNotes" onclick="hideAllNotes()">Hide Notes</button>
+            </section>
+        </div>
+
+        <section id="displayNotes"></section>
+        
+    </main>
+
+    <script src="noteIt.js"></script>
+    
+</body>
+</html>
