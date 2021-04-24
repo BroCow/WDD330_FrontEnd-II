@@ -49,6 +49,27 @@ function showAllNotes(){
     }
 }
 
+
+function deleteNote(){
+    
+    var storedNotesString = localStorage.getItem("all_notes");
+    var allNotes = JSON.parse(storedNotesString);
+
+    //document.getElementById("message").innerHTML = allNotes[0];
+
+    if(allNotes == null){
+        document.getElementById("message").innerHTML = "Array empty";
+    }
+    else{
+        localStorage.removeItem("all_notes");
+        document.getElementById("message").innerHTML = "Note deleted";
+    }
+    
+}
+
 function hideAllNotes(){
-    document.getElementById("displayNotes").innerHTML = null;
+    var displayNotes = document.getElementById("displayNotes");
+    if(displayNotes.innerHTML != null){
+        displayNotes.innerHTML = null;
+    }
 }

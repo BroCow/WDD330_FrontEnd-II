@@ -7,7 +7,7 @@
     <title>WDD 330 Portfolio - Week 1</title>
     <link rel="stylesheet" href="wk1.css">
 </head>
-<body>
+<body onload="showAllNotes()">
     <header>
         <h1>Chris Cowan's WDD-330 Portfolio - Week 1</h1>
         <!-- <div class="home_btn_div" id="wk1Home_btn_div"> -->
@@ -30,9 +30,12 @@
     
                 <section class="buttons">
                     <button id="saveNote" onclick="saveNote()">Save Note</button>
+                    <button id="deleteNote" onclick="deleteNote()">Delete Note</button>
                     <button id="hideNotes" onclick="hideAllNotes()">Hide Notes</button>
                 </section>
             </div>
+
+            <p id="message"></p>
     
             <section id="displayNotes"></section>
         </section>
