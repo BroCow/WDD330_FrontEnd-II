@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Group 7</title>
+</head>
+<body>
+    <section id="step1">
+        <!-- Function gets user input -->
+        <input id="userInput">
+        <!-- When button is pressed it should read the user input and
+             output result to div -->
+        <button onclick="readInput()">Read and Show Input</button>
+    </section>
+
+    <section id="step2">
+        <input id="numberInput">
+        <!-- When button is pressed it should read the number from the input,
+        make sure it is a valid number, call function, output result to div -->
+        <button onclick="sumNumbers(document.getElementById('numberInput').value)">Add All Numbers Up To Entered Value!</button>
+    </section>
+
+    <section id="step3">
+        <label>
+        <input id="numberInput1">
+        </label>
+        <!-- When button is pressed it should add the number1 input to the number2 input
+            and output result to div -->
+        <button onclick="addMachine(document.getElementById('numberInput1').value, document.getElementById('numberInput2').value)">+</button>
+        
+        <label>
+        <input id="numberInput2">
+        </label>
+    </section>
+
+    <!-- Result of function from user input displayed within div -->
+    <div id="result"></div>
+    
+    <script src="wk2ta.js"></script>
+</body>
+</html>

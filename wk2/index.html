@@ -16,8 +16,8 @@
     <main>
         <section class="category_section" id="wk2Notes_section">
             <h2>Week 2 Notes</h2>
-            <button>Show Notes</button>
-            <h3>JavaScript Grammer</h3>
+            <h3>JS Ninja Chapter 2 - Programming Basics</h3>
+            <h4>JavaScript Grammer</h4>
             <p>C-style - similar to C languages</p>>
             ASI automatically adds semi-colons, but it is best practice to add them at the end 
             of each statement.
@@ -26,7 +26,7 @@
             <br> 
             Objects - Anything that isn't a primitive data type
             <br>
-            <h3>Variables</h3>
+            <h4>Variables</h4>
             const = can't change value, but not immutable
             <br>
             Underlying data in object can change (mutating object)
@@ -61,6 +61,42 @@
             Always use HARD EQUALITY to avoid potential coercion issues. If number is submitted in form,
             convert to number using Number('5') === 5.
             <br>
+
+            <h3>JS Ninja Chapter 3 - Arrays, Logic, and Loops</h3>
+            <h4>Arrays</h4>
+            <p>const myArray = [] - Creates an array literal</p>
+            <p>Delete - only removes the VALUE of the item, not the index itself</p>
+            <p>Destructuring - const [x,y] = [1, 2] - variables exist outside of array</p>
+            <h5>Array Properties and Methods</h5>
+            <p>.length - shows how many indexes; array[array.length -1] shows last item</p>
+            <p>Array Length can be adjusted manually - array.length = 5; if there were more items in the array, they would be removed!</p>
+            <p>join() Method - used to turn array into a string with comma separated values, or takes different separator as an argument ('&')</p>
+            <p>slice() Method - like a copy and paste of the sliced items into another array (non-destructive)</p>
+            <p>splice() Method - replaces item in array with another item, or inserts new item at specified location; also a 
+                good option for removing item from array completely by specifying location, "1", and no replacement splice(3,1) (destructive)</p>
+            <p>sort() method - Alphabetic by default, but sorts numbers by 1st digit (10 before 9)</p>
+            <p>indexOf() method - searches for value in array, returns index number.  This would be good for a 
+                "search & delete" function!</p>
+
+            <h5>Multidimentional Arrays</h5>
+            <p>Array of arrays - const coordinates = [[1,3], [5,2]];</p>
+            <p>To access values - coordinates [1][0] - where first value is which array, second value is index</p>
+            <p>spread() method can be used to "flatten" Multidimentional arrays</p>
+
+            <h5>Maps</h5>
+            <p>Good for key-value pair lookup (also called hash tables or dictionaries</p>
+            <p>.get method returns value of key:  map.get(4) returns value of key "4"</p>
+
+            <h5>Logic</h5>
+            <p>Ternary Operator - shorthand for if-else statement:  condition ? //cod to run : //code for else</p>
+            
+
+            
+            
+
+            
+
+
            
         </section>
 
@@ -110,6 +146,7 @@
                     <br>
                     <strong>Answer:  </strong>
                 </li>
+                
             </ol>
 
         </section>
