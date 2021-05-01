@@ -1,5 +1,17 @@
 
 
+function goHome(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/";
+}
+
+function goWk1(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk1/";
+}
+
+function goWk2(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk2/";
+}
+
 // Dynamic table of contents
 const links = [
     {label:"Week 1", link: "https://brocow.github.io/WDD330_FrontEnd-II/wk1/"},

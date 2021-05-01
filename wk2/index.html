@@ -7,114 +7,115 @@
     <title>WDD 330 Portfolio - Week 2</title>
     <link rel="stylesheet" href="wk2.css">
 </head>
-<body>
+<body onload="createButtons()">
+
+    <nav>
+        <button class="navBtn" id="homeBtn" onclick="goHome()">Home</button>
+        <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
+        <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
+    </nav>
+
     <header>
         <h1>Chris Cowan's WDD-330 Portfolio - Week 2</h1>
-        <button class="home_btn" id="wk1Home_btn" onclick="goHome()">Portfolio Home</button>
     </header>
 
+    
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn" onclick="showNotes()">View Notes</button>
+        <button class="catBtn" id="exercisesBtn" onclick="showExercises()">View Exercises</button>
+        <button class="catBtn" id="questionsBtn" onclick="showQuestions()">View Questions</button>
+    </div>
+
     <main>
-        <section class="category_section" id="wk2Notes_section">
+        <section class="category_section" id="wk2Notes_section" style="display: none;">
             <h2>Week 2 Notes</h2>
-            <h3>JS Ninja Chapter 2 - Programming Basics</h3>
-            <h4>JavaScript Grammer</h4>
-            <p>C-style - similar to C languages</p>>
-            ASI automatically adds semi-colons, but it is best practice to add them at the end 
-            of each statement.
-            <br>
-            Blocks - Do not need to end with semi-colons {}
-            <br> 
-            Objects - Anything that isn't a primitive data type
-            <br>
-            <h4>Variables</h4>
-            const = can't change value, but not immutable
-            <br>
-            Underlying data in object can change (mutating object)
-            <br>
-            const name = {value: 'Chris'};
-            name.value = 'Carter';
-            <br>
-            Try to use const to declare most variables - cuts down on bugs
-            <br>
-            var = don't use it (outdated)
-            let = replaced var as of ES6 (block-scoped)
-            <br>
-            Global scope variables - minimize the use to reduce chance of errors
-            <br>
-            Backslash - can be used to escape characters like '
-            <br>
-            Properties - accessed by using the . notation (such as .length) OR brackets ['']
-            <br>
-            Methods - accessed by .notation followed by (), perform an action (like toUpperCase())
-            <br>
-            Template Literals - AWESOME!  Using backticks (`) allows for insertion of variables into 
-            strings using ${}; ES6 often uses backticks to create ALL strings!!!
-            <br>
-            Number.isInteger - used to check if number is/isn't and integer (boolean)
-            <br>
-            0x = hexidecimal / 0o = octal / 0b = binary
-            <br>
-            Number() is preferred way to change string to number:  Number('23');
-            <br>
-            String() is preferred way to change number to string: String(23);
-            <br>
-            Always use HARD EQUALITY to avoid potential coercion issues. If number is submitted in form,
-            convert to number using Number('5') === 5.
-            <br>
-
-            <h3>JS Ninja Chapter 3 - Arrays, Logic, and Loops</h3>
-            <h4>Arrays</h4>
-            <p>const myArray = [] - Creates an array literal</p>
-            <p>Delete - only removes the VALUE of the item, not the index itself</p>
-            <p>Destructuring - const [x,y] = [1, 2] - variables exist outside of array</p>
-            <h5>Array Properties and Methods</h5>
-            <p>.length - shows how many indexes; array[array.length -1] shows last item</p>
-            <p>Array Length can be adjusted manually - array.length = 5; if there were more items in the array, they would be removed!</p>
-            <p>join() Method - used to turn array into a string with comma separated values, or takes different separator as an argument ('&')</p>
-            <p>slice() Method - like a copy and paste of the sliced items into another array (non-destructive)</p>
-            <p>splice() Method - replaces item in array with another item, or inserts new item at specified location; also a 
-                good option for removing item from array completely by specifying location, "1", and no replacement splice(3,1) (destructive)</p>
-            <p>sort() method - Alphabetic by default, but sorts numbers by 1st digit (10 before 9)</p>
-            <p>indexOf() method - searches for value in array, returns index number.  This would be good for a 
-                "search & delete" function!</p>
-
-            <h5>Multidimentional Arrays</h5>
-            <p>Array of arrays - const coordinates = [[1,3], [5,2]];</p>
-            <p>To access values - coordinates [1][0] - where first value is which array, second value is index</p>
-            <p>spread() method can be used to "flatten" Multidimentional arrays</p>
-
-            <h5>Maps</h5>
-            <p>Good for key-value pair lookup (also called hash tables or dictionaries</p>
-            <p>.get method returns value of key:  map.get(4) returns value of key "4"</p>
-
-            <h5>Logic</h5>
-            <p>Ternary Operator - shorthand for if-else statement:  condition ? //cod to run : //code for else</p>
+            <div class="sectionContent">
+                <h3>JS Ninja Chapter 2 - Programming Basics</h3>
+                <h4>JavaScript Grammer</h4>
+                <hr>
+                <p>C-style - similar to C languages</p>
+                <p>ASI automatically adds semi-colons, but it is best practice to add them at the end 
+                    of each statement.</p>
+                <p>Blocks - Do not need to end with semi-colons {}</p>
+                <p>Objects - Anything that isn't a primitive data type</p>
+                
+                <h4>Variables</h4>
+                <hr>
+                <p>const = can't change value, but not immutable</p>
+                <p>Underlying data in object can change (mutating object)
+                <br>
+                const name = {value: 'Chris'};
+                name.value = 'Carter';
+                </p>
+                <p>Try to use const to declare most variables - cuts down on bugs</p>
+                <p>var = don't use it (outdated)</p>
+                <p>let = replaced var as of ES6 (block-scoped)</p>
+                <p>Global scope variables - minimize the use to reduce chance of errors</p>
+                <p>Backslash - can be used to escape characters like '</p>
+                <p>Properties - accessed by using the . notation (such as .length) OR brackets ['']</p>
+                <p>Methods - accessed by .notation followed by (), perform an action (like toUpperCase())</p>
+                <p>Template Literals - AWESOME!  Using backticks (`) allows for insertion of variables into 
+                    strings using ${}; ES6 often uses backticks to create ALL strings!!!</p>
+                <p>Number.isInteger - used to check if number is/isn't and integer (boolean)</p>
+                <p>0x = hexidecimal / 0o = octal / 0b = binary</p>
+                <p>Number() is preferred way to change string to number:  Number('23');</p>
+                <p>String() is preferred way to change number to string: String(23);</p>
+                <p>Always use HARD EQUALITY to avoid potential coercion issues. If number is submitted in form,
+                    convert to number using Number('5') === 5.</p>
 
 
-            
-            
+                <h3>JS Ninja Chapter 3 - Arrays, Logic, and Loops</h3>
+                <h4>Arrays</h4>
+                <hr>
+                <p>const myArray = [] - Creates an array literal</p>
+                <p>Delete - only removes the VALUE of the item, not the index itself</p>
+                <p>Destructuring - const [x,y] = [1, 2] - variables exist outside of array</p>
+                <h5>Array Properties and Methods</h5>
+                <p>.length - shows how many indexes; array[array.length -1] shows last item</p>
+                <p>Array Length can be adjusted manually - array.length = 5; if there were more items in the array, they would be removed!</p>
+                <p>join() Method - used to turn array into a string with comma separated values, or takes different separator as an argument ('&')</p>
+                <p>slice() Method - like a copy and paste of the sliced items into another array (non-destructive)</p>
+                <p>splice() Method - replaces item in array with another item, or inserts new item at specified location; also a 
+                    good option for removing item from array completely by specifying location, "1", and no replacement splice(3,1) (destructive)</p>
+                <p>sort() method - Alphabetic by default, but sorts numbers by 1st digit (10 before 9)</p>
+                <p>indexOf() method - searches for value in array, returns index number.  This would be good for a 
+                    "search & delete" function!</p>
 
-            
+                <h5>Multidimentional Arrays</h5>
+                <p>Array of arrays - const coordinates = [[1,3], [5,2]];</p>
+                <p>To access values - coordinates [1][0] - where first value is which array, second value is index</p>
+                <p>spread() method can be used to "flatten" Multidimentional arrays</p>
 
+                <h5>Maps</h5>
+                <p>Good for key-value pair lookup (also called hash tables or dictionaries</p>
+                <p>.get method returns value of key:  map.get(4) returns value of key "4"</p>
 
-           
+                <h4>Logic</h4>
+                <hr>
+                <p>Ternary Operator - shorthand for if-else statement:  condition ? //cod to run : //code for else</p>
+            </div>
         </section>
 
 
-        <section class="category_section" id="wk2Exercises_section">
+        <section class="category_section" id="wk2Exercises_section" style="display: none;">
+            <h2>Week 2 Exercises</h2>
             <h3 class="category_header" id="wk2Exercises_header">Exercises</h3>
 
             <ol class="category_ol" id="wk2Exercises_ol">
                 <h4>JavaScript Novice to Ninja</h4>
                 <hr>
-                <li class="category_li" id="wk2Exercise2_li">
+                <li class="category_li" id="wk2Exercise1_li">
                     <a href="./wk2_exercises/supermanName.html">Chapters 2 & 3 Quiz Ninja Project - Hero's Names</a>
+                </li>
+                <li class="category_li" id="wk2Exercise2_li">
+                    <a href="./wk2_exercises/eloquent2.html">Eloquent JavaScript Chapter 2 Exercises</a>
                 </li>
             </ol>
 
         </section>
 
-        <section class="category_section" id="wk2Questions_section">
+        <section class="category_section" id="wk2Questions_section" style="display: none;">
+            <h2>Week 2 Questions</h2>
             <h3 class="category_header" id="wk2Questions_header">Questions</h3>
 
             <ol class="category_ol" id="wk2Questions_ol">

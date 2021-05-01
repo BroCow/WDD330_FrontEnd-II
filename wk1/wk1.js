@@ -4,6 +4,14 @@ function goHome(){
     location.href = "https://brocow.github.io/WDD330_FrontEnd-II/";
 }
 
+function goWk1(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk1/";
+}
+
+function goWk2(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk2/";
+}
+
 
 // Script for Notes
 function saveNote(){
