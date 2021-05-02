@@ -25,7 +25,7 @@ function sumNumbers(numberInput){
         alert("You must enter a number.");
     }
 }
-
+ 
 
 // Function for step 3
 /* Function takes numbers from each input, adds them together, and outputs result */

@@ -137,6 +137,10 @@ textarea:focus{
     margin-bottom: 5px;
 }
 
+.catBtn:hover{
+    color: yellow;
+}
+
 #saveNote{
     margin-left: 32px;
 }
