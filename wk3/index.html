@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 3</title>
+    <link rel="stylesheet" href="wk3.css">
+</head>
+<body onload="createButtons()">
+
+    <nav>
+        <button class="navBtn" id="homeBtn" onclick="goHome()">Home</button>
+        <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
+        <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
+        <button class="navBtn" id="week3Btn" onclick="goWk2()">Week 3</button>
+    </nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 3</h1>
+    </header>
+
+    
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn" onclick="showNotes()">View Notes</button>
+        <button class="catBtn" id="exercisesBtn" onclick="showExercises()">View Exercises</button>
+        <button class="catBtn" id="questionsBtn" onclick="showQuestions()">View Questions</button>
+    </div>
+
+    <main>
+        <section class="category_section" id="wk3Notes_section" style="display: none;">
+            <h2>Week 3 Notes</h2>
+            <div class="sectionContent">
+                <h3>Article - Object Methods: this</h3>
+                <h4>h4</h4>
+                <hr>
+                <p>note</p>
+
+
+                <h3>Article - This in JavaScript</h3>
+                <h4>h4</h4>
+                <hr>
+                <p>note</p>
+                
+            </div>
+        </section>
+
+
+        <section class="category_section" id="wk3Exercises_section" style="display: none;">
+            <h2>Week 3 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk3Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk3Exercises_ol">
+                    <h4>h4</h4>
+                    <hr>
+                    <li class="category_li" id="wk3Exercise1_li">
+                        <a href="">exercise title</a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="wk3Questions_section" style="display: none;">
+            <h2>Week 3 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk3Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk3Questions_ol">
+                    <h4>h4</h4>
+                    <hr>
+                    <li class="category_li">
+                        If 'const' is used to declare a variable inside a loop or function, can it be 
+                        used again in another loop/function?
+                        <br>
+                        <strong>Answer:  </strong>Const and let are block-scoped, so it depends if it is 
+                        global or local.
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="wk3.js"></script>
+    
+</body>
+</html>
