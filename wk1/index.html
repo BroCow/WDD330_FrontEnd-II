@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 Portfolio - Week 1</title>
-    <link rel="stylesheet" href="wk1.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body onload="showAllNotes()">
     <nav>
@@ -13,19 +13,21 @@
         <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
         <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
     </nav>
-    
+     
     <header>
         <h1>Chris Cowan's WDD-330 Portfolio - Week 1</h1>
-        <!-- <div class="home_btn_div" id="wk1Home_btn_div"> -->
-            <button class="home_btn" id="wk1Home_btn" onclick="goHome()">Portfolio Home</button>
-        <!-- </div> -->
     </header>
+
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn" onclick="showNotes()">View Notes</button>
+        <button class="catBtn" id="exercisesBtn" onclick="showExercises()">View Exercises</button>
+        <button class="catBtn" id="questionsBtn" onclick="showQuestions()">View Questions</button>
+    </div>
 
     <main>
         <section class="category_section" id="wk1Notes_section">
             <div id="note_div">
                 <h2>Week 1 Notes</h2>
-    
                 <label id="noteDescLabel" for="noteDesc">Note Description:
                     <input id="noteDesc">
                 </label>
@@ -35,8 +37,8 @@
                 </section>
     
                 <section class="buttons">
-                    <button id="saveNote" onclick="saveNote()">Save Note</button>
-                    <button id="hideNotes" onclick="hideAllNotes()">Hide Notes</button>
+                    <button class="noteBtn" id="saveNote" onclick="saveNote()">Save Note</button>
+                    <button class="noteBtn" id="hideNotes" onclick="hideAllNotes()">Hide Notes</button>
                 </section>
             </div>
 
@@ -46,70 +48,73 @@
         </section>
 
         <section class="category_section" id="wk1Exercises_section">
-            <h3 class="category_header" id="wk1Exercises_header">Exercises</h3>
-
-            <ol class="category_ol" id="wk1Exercises_ol">
-                <h4>Doing Stuff With Web Things</h4>
-                <hr>
-                <li class="category_li" id="wk1Exercise1_li">
-                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/stuffwthings.html">Congratulations</a>
-                </li>
-                <li class="category_li" id="wk1Exercise2_li">
-                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/story_editor.html">Story Editor</a>
-                </li>
-                <li class="category_li" id="wk1Exercise3_li">
-                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/choices.html">Choices</a>
-                </li>
-                <li class="category_li" id="wk1Exercise4_li">
-                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/groupsLoops.html">Groups and Loops</a>
-                </li>
-                <li class="category_li" id="wk1Exercise5_li">
-                    <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/noteIt.html">Note It</a>
-                </li>
-            </ol>
-
+            <h2>Week 1 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk1Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk1Exercises_ol">
+                    <h4>Doing Stuff With Web Things</h4>
+                    <hr>
+                    <li class="category_li" id="wk1Exercise1_li">
+                        <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/stuffwthings.html">Congratulations</a>
+                    </li>
+                    <li class="category_li" id="wk1Exercise2_li">
+                        <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/story_editor.html">Story Editor</a>
+                    </li>
+                    <li class="category_li" id="wk1Exercise3_li">
+                        <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/choices.html">Choices</a>
+                    </li>
+                    <li class="category_li" id="wk1Exercise4_li">
+                        <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/groupsLoops.html">Groups and Loops</a>
+                    </li>
+                    <li class="category_li" id="wk1Exercise5_li">
+                        <a href="https://brocow.github.io/WDD330_FrontEnd-II/wk1/wk1_exercises/noteIt.html">Note It</a>
+                    </li>
+                </ol>
+            </div>
         </section>
 
         <section class="category_section" id="wk1Questions_section">
-            <h3 class="category_header" id="wk1Questions_header">Questions</h3>
+            <h2>Week 1 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk1Questions_header">Questions</h3>
 
-            <ol class="category_ol" id="wk1Questions_ol">
-                <h4>03 Turn on Github Pages</h4>
-                <hr>
-                <li class="category_li">When setting up my GitHub repository, the dropdown menu only listed <q>main,</q> not <q>master branch</q>. 
-                    What is the difference between <q>main</q> and <q>master branch</q>?
-                <br>
-                <strong>Answer:  </strong>I found <a href="https://stackoverflow.com/questions/64249491/difference-between-main-branch-and-master-branch-in-github#:~:text=There%20is%20no%20actual%20difference,pushes%20your%20current%20commits%20there.">this answer</a> from Stackoverflow.
-                </li>
-                <br>
-                <li class="category_li">How do you set up a new username and password to connect a new GitHub repository to a directory?
-                <br>
-                <strong>Answer:  </strong>I found <a href="https://stackoverflow.com/questions/29980827/name-and-email-set-in-gits-per-user-configuration-file-however-git-is-still-us/29980873">this answer</a> from Stackoverflow.
-                </li>
-                
-                <h4>04 Dynamic Table of Contents</h4>
-                <hr>
-                <li class="category_li">How do you loop through an array with objects using JavaScript?
-                <br>
-                <strong>Answer:  </strong>I found these three references that helped me figure this out:
-                <br>
-                <a href="https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/">freecodecamp.org</a>
-                <br>
-                <a href="https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2">medium.com</a>
-                <br>
-                <a href="https://stackoverflow.com/questions/19529403/javascript-loop-through-object-array">Stackoverflow - Javascript loop through object array?</a>
-                </li>
-                <h4>LocalStorage</h4>
-                <hr>
-                <li class="category_li">
-                    What is the difference between localStorage and sessionStorage?  Is one of these better than the other for certain things?
-                </li>
-                <li class="category_li">
-                    Is there any reason to use cookies instead of localStorage? 
-                </li>
-                
-            </ol>
-
+                <ol class="category_ol" id="wk1Questions_ol">
+                    <h4>03 Turn on Github Pages</h4>
+                    <hr>
+                    <li class="category_li">When setting up my GitHub repository, the dropdown menu only listed <q>main,</q> not <q>master branch</q>. 
+                        What is the difference between <q>main</q> and <q>master branch</q>?
+                    <br>
+                    <strong>Answer:  </strong>I found <a href="https://stackoverflow.com/questions/64249491/difference-between-main-branch-and-master-branch-in-github#:~:text=There%20is%20no%20actual%20difference,pushes%20your%20current%20commits%20there.">this answer</a> from Stackoverflow.
+                    </li>
+                    <br>
+                    <li class="category_li">How do you set up a new username and password to connect a new GitHub repository to a directory?
+                    <br>
+                    <strong>Answer:  </strong>I found <a href="https://stackoverflow.com/questions/29980827/name-and-email-set-in-gits-per-user-configuration-file-however-git-is-still-us/29980873">this answer</a> from Stackoverflow.
+                    </li>
+                    
+                    <h4>04 Dynamic Table of Contents</h4>
+                    <hr>
+                    <li class="category_li">How do you loop through an array with objects using JavaScript?
+                    <br>
+                    <strong>Answer:  </strong>I found these three references that helped me figure this out:
+                    <br>
+                    <a href="https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/">freecodecamp.org</a>
+                    <br>
+                    <a href="https://medium.com/chingu/looping-over-arrays-and-objects-in-javascript-57e1188c1ba2">medium.com</a>
+                    <br>
+                    <a href="https://stackoverflow.com/questions/19529403/javascript-loop-through-object-array">Stackoverflow - Javascript loop through object array?</a>
+                    </li>
+                    <h4>LocalStorage</h4>
+                    <hr>
+                    <li class="category_li">
+                        What is the difference between localStorage and sessionStorage?  Is one of these better than the other for certain things?
+                    </li>
+                    <li class="category_li">
+                        Is there any reason to use cookies instead of localStorage? 
+                    </li>
+                    
+                </ol>
+            </div>
         </section>
         
     </main>

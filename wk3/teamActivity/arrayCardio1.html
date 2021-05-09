@@ -9,12 +9,13 @@
   <p><a href="https://www.javascripttutorial.net/javascript-array-filter/">Exercise 1 resource</a></p>
   <p><a href="https://www.javaer101.com/en/article/32415088.html">Exercise 2 resource 1</a></p>
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring">Exercise 2 resource 2</a></p>
+  <p><a href="https://stackoverflow.com/questions/1069666/sorting-object-property-by-values">Exercise 3 resource</a></p>
   <script>
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
 
     // Some data we can work with
-    console.log("I can see it!");
+    
     const inventors = [
       { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
       { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -43,35 +44,79 @@
     let inventors1500s = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <=1600);
     console.log(inventors1500s);
 
+
+
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
-    const names = inventors.map(({first, last}) => ({first, last}));
-    console.log(names);
+    const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    console.log(fullNames);
+    /******* My solution below *********/
+    // const names = inventors.map(({first, last}) => ({first, last}));
+    // console.log(names);
+
+
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-   const test = inventors.sort(function(a, b)
-{
-    return a[2] - b[2];
-});
-    console.log(test);
+
+    // SORT takes two items (inventors) at at time, compares them, then moves them accordingly
+      // Solution using if/else 
+          // const bDaySort = inventors.sort(function(a, b){ // a & b represent "first person" and "second person"
+          //   if(a.year > b.year){ // If first persons b-day is > second persons b-day
+          //     return 1; // move it down
+          //   } else {
+          //     return -1; // move it up
+          //   }
+          // });
+    // Solution using ternary
+    const bDaySort = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
+    console.table(bDaySort);
+    /******* My solution below ********/
+          //  const sortBday = inventors.slice(0);
+          //  sortBday.sort(function(a,b){
+          //      return a.year - b.year;
+          //  });
+          //  console.log(sortBday);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    const totalYears = inventors.reduce((total, inventor) => { // total represents whatever returned from last loop
+      return total + (inventor.passed - inventor.year);
+    }, 0); // If this is run without a starting value for total, it is undefined and will not work - make starting value '0'
+    console.log(totalYears);
+
+
 
     // 5. Sort the inventors by years lived
+    const sortYearsLived = inventors.sort(function(a,b) {
+      const lastGuy = a.passed - a.year;
+      const nextGuy = b.passed - b.year;
+      return lastGuy > nextGuy ? 1 : -1;
+    });
+    console.log(sortYearsLived);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // const category = document.querySelector('.mw-category');
+    // const links = category.querySelectorAll('a'); // querySelector can be used to search within DOM element - don't have to use document.querySelector
+    //                                               // has to made an array using Array.from() so that the value can be returned
+    // const de = links.map(link => link.textContent); // textContent will give back whatever text is in link element
 
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const sortLastName = people.sort();
+    console.log(sortLastName);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const transportation = data.reduce(function(obj, type){
+      console.log(type);
+      return obj;
+    }, {})  // Have to start with something, so this is an empty object that will be filled during loops
+    
   </script>
 </body>
 </html>

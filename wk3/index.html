@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 Portfolio - Week 3</title>
-    <link rel="stylesheet" href="wk3.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body onload="createButtons()">
 
@@ -13,7 +13,7 @@
         <button class="navBtn" id="homeBtn" onclick="goHome()">Home</button>
         <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
         <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
-        <button class="navBtn" id="week3Btn" onclick="goWk2()">Week 3</button>
+        <button class="navBtn" id="week3Btn" onclick="goWk3()">Week 3</button>
     </nav>
 
     <header>
@@ -28,7 +28,8 @@
     </div>
 
     <main>
-        <section class="category_section" id="wk3Notes_section" style="display: none;">
+        <h3><a href=""></a> Week 3 Team Activity</h3>
+        <section class="category_section" id="wk3Notes_section">
             <h2>Week 3 Notes</h2>
             <div class="sectionContent">
                 <h3>Article - Object Methods: this</h3>
@@ -41,7 +42,124 @@
                 <h4>h4</h4>
                 <hr>
                 <p>note</p>
+
+
+                <h3>Novice to Ninja - Ch5: Objects</h3>
+                <h4>Chapter Topics</h4> 
+                <ul>
+                    <li>Object Literals</li>
+                    <li>Adding Properties to Objects</li>
+                    <li>Object Methods</li>
+                    <li>JSON</li>
+                    <li>The Math Object</li>
+                    <li>The Date Object</li>
+                    <li>The RegExp Object</li>
+                </ul>
+                <h4>Object Literals</h4>
+                <hr>
+                <p>Method - property value that is a function</p>
+                <p>Object like dictionary - look up property name to see value</p>
+                <p>Used to keep related info and functionality together</p>
+                <p>If a property doesn't follow rules for naming values, must be quoted (this is bad practice)</p>
+                <h4>Creating Objects</h4>
+                <hr>
+                <p>If property key and variable name are the same, use ES6 shorthand to create object:<br>
+                (See example in wk3.js file)</p>
+                <p>Accessing Properties - must use [''] to access property that doesn't follow naming rules (i.e. "real name")</p>
+                <p>Computed Properties - ES6 allows for JS code to be used within [] to create property name<br>
+                (See example in wk3.js file)</p>
+                <p>Symbols as Property Keys - avoids duplication of property names <br>
+                const heroName = Symbol('heroName'); <br>
+                const supergirl = { [name]: 'Supergirl' }; <br>
+                Access using square bracket:  supergirl[heroName];</p>
+
+                <h4>Checking if Properites or Methods Exist</h4>
+                <hr>
+                <p>Check if Property/Method Exists in Object - use 'in' operator</p>
+                <p>hasOwnProperty() - use to id if property belongs to that object (not inherited)</p>
                 
+                <h4>Finding all the Properties of an Object</h4>
+                <hr>
+                <p>Find All Properties of Object - use for in loop</p>
+                <button class="exampleBtn" onclick="showSupermanKeys()">Show Superman Properties</button>
+                <div id="supermanKeys"></div>
+                <p>Object.keys() & Object.values() - returns keys or values of object as array</p>
+
+                <h4>Nested Objects</h4>
+                <hr>
+                <p>Objects as Function Parameters</p>
+            
+                <h4>Built-in Objects</h4>
+                <hr>
+                <p>JSON</p>
+                <ol>
+                    <li>Property names must be double quoted</li>
+                    <li>Permitted values = double-quoted strings, numbers, true/false, arrays, objects, null</li>
+                    <li>Functions NOT permitted</li>
+                </ol>
+                <p>JSON.parse creates JavaScript object from JSON data string</p>
+                <p>Click button below to parse JSON data of my family, then view it in the console</p>
+                <button class="exampleBtn" onclick="showParseFamily()">Parse Family - Show in Console</button>
+                <p>JSON.stringify creates string of JSON data from JavaScript object</p>
+                <p>Click button below to stringify JavaScript object of my family, then it will display below!</p>
+                <button class="exampleBtn" onclick="showStringifyFamily()">Stringify Family - Show Below</button>
+                <div id="displayJSONFamily"></div>
+
+                <p>Generating a Random Number Between Two Values</p>
+                <label for="number1">Enter 1st Value</label><br>
+                <input type="text" id="number1"><br>
+                <label for="number2">Enter 2nd Value</label><br>
+                <input type="text" id="number2"><br>
+                <br>
+                <button class="exampleBtn" onclick="showNumberBetween()">Show A Number Between Values</button>
+                <div id="numberBetweenResult"></div>
+
+                <p>The Date Object</p>
+                <p>A date object can be created by passing arguments</p>
+                <p>Getter Methods - available after date object created</p>
+                <p>Input the year, month, and day of your birthday below, then use the button 
+                    to show you what day of the week you were born on!</p>
+                <label for="year">Input four digit year:</label><br>
+                <input type="text" id="year" placeholder="yyyy"><br>
+                <label for="month">Input two-digit month:</label><br>
+                <input type="text" id="month" placeholder="mm"><br>
+                <label for="day">Input two-digit day:</label><br>
+                <input type="text" id="day" placeholder="dd"><br>
+                <br>
+                <button class="exampleBtn" onclick="getDayOfWeek()">Show the Day I was Born On!</button>
+                <div id="dayOfWeek_result"></div>
+                
+                <p>RegExp Object - common use is "find and replace" operations</p>
+                
+                <h3>Novice to Ninja - Ch6: DOM</h3>
+                <p>Notes for this section consist of manipulating the DOM using examples from reading</p>
+                <h4 id="title">Justice League</h4>
+                <ul id="roster">
+                    <li class="hero">Superman</li>
+                    <li class="vigilante hero" id="bats">Batman</li>
+                    <li class="hero">Wonder Woman</li>
+                </ul>
+                <p>Click button below to add <q>Flash</q> to the list of heroes!</p>
+                <button class="exampleBtn" onclick="addFlash()">Add Flash</button>
+                <p>Click button below to change the Justice League to the Suicide Squad!</p>
+                <button class="exampleBtn" onclick="changetoSuicideSquad()">Show Suicide Squad</button>
+                <p>Click button below to change the Suicide Squad title to blood red!</p>
+                <button class="exampleBtn" onclick="makeSuicideSquadRed()">Turn Suicide Squad Red</button>
+
+                <h3>Novice to Ninja - Ch7: Events</h3>
+                <p><q>Event Listeners</q> are non-blocking, so they allow js to continue running</p>
+                <p>Event Listeners - allow multiple functions to be attached independently to different events</p>
+                <p>.addEventListener - 2 parameters, first = type of event / second = callback function</p>
+                <h5>Event Listener Example</h5>
+                <p id="eventListenerP">Click on this paragraph to reveal a secret message!</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/Events">Mozilla Event Reference Page</a></p>
+                <p>Keyboard Events - Keydown, keypress, and keyup. Keypress tracks characters typed on the screen.</p>
+                <h5>Keydown Example</h5>
+                <p id="keydown">If you push a key down, the background color of this text changes! (NOT WORKING)</p>
+                <p>preventDefault() - prevents the default browser action from occuring, like redirecting to a page when a link is clicked. </p>
+
+
+
             </div>
         </section>
 
@@ -69,11 +187,9 @@
                     <h4>h4</h4>
                     <hr>
                     <li class="category_li">
-                        If 'const' is used to declare a variable inside a loop or function, can it be 
-                        used again in another loop/function?
+                        How does a mouse-over event, or a :hover, work with a mobile device?  Or does it?
                         <br>
-                        <strong>Answer:  </strong>Const and let are block-scoped, so it depends if it is 
-                        global or local.
+                        <strong>Answer:  </strong>
                     </li>
                 </ol>
             </div>

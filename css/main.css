@@ -1,20 +1,23 @@
-
-
-header{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
+#homeBtn{
+    box-shadow: 0px 0px 5px yellow;
 }
 
-h1{
-    color: white;
-    font-size: 3em;
+body{
+    background-color: silver;
+}
+
+nav, .catBtn_container{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
 }
 
 nav{
-    display: flex;
-    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.catBtn_container{
+    padding: 10px 20px;
 }
 
 .navBtn{
@@ -28,16 +31,70 @@ nav{
    /* margin-bottom: 5px;*/
 }
 
-#homeBtn{
-    box-shadow: 0px 0px 5px yellow;
+.catBtn{
+    width: 125px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: silver;
+    box-shadow: 0px 0px 10px black;
+    color: black;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
-#aboutMe{
-    background-color: lightgray;
+.catBtn:hover{
+    color: yellow;
+}
+
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+ 
+h1{
+    color: white;
+    font-size: 3em;
 }
 
 h2{
-    font-size: 2em;
+    color: black;
+    font-size: 3em;
+    padding-left: 20px;
+}
+
+h3{
+    color: white;
+    background-color: black;
+    font-size: 1.1em;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+h4{
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+li{
+    margin-left: 20px;
+}
+
+section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sectionContent{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+
+/**** Home Page Styling ****/
+#aboutMe{
+    background-color: lightgray;
 }
 
 .aboutMe_p{
@@ -68,7 +125,6 @@ h2{
     text-align: center;
 }
 
-
 #github{
     width: 350px;
     background-color: black;
@@ -98,7 +154,87 @@ h2{
 #github_link{
     color: #78eff5;  
 }
+/***********************/
 
-li{
-    font-size: 1.2em;
+/**** Week 1 Styling ****/
+input{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px lightblue inset;
+    height: 25px;
+    width: 200px;
+    text-indent: 5px;
+}
+
+#note_div{
+    margin: auto;
+    text-align: center;
+    width: 700px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    background-color: lightgray;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(235, 233, 164) inset;
+}
+
+textarea{
+    width: 90%;
+    height: 200px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px lightblue inset;
+    text-indent: 5px;
+    resize: none;
+    overflow: scroll;
+}
+
+textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(235, 233, 164) inset;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.noteBtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(216, 225, 37);
+    outline: none;
+    box-shadow: 0px 0px 5px white inset;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#saveNote{
+    margin-left: 32px;
+}
+
+#hideNotes{
+    margin-right: 32px;
+}
+
+/**** Week 2 Styling ****/
+#eventListenerP{
+    color: orange;
+}
+
+.exampleBtn{
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(216, 225, 37);
+    outline: none;
+    box-shadow: 0px 0px 5px white inset;
+    color: black;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
