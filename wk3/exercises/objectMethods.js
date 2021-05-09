@@ -16,7 +16,7 @@ const userInfo = {
         result.innerHTML = "Greetings " + this.name + ". You are " +
         this.age + "years old and live in " + this.location + "!";
     }
-};
+}; 
 
 
 

@@ -9,7 +9,7 @@ let thomas = new Human(24);
 
 console.log(greg);
 console.log(thomas);
-
+ 
 
 // My experiment - Expand on example above using "this" to create a new user from html input
 const firstName = document.getElementById("firstName");

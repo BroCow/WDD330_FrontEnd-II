@@ -1,9 +1,13 @@
-#homeBtn{
-    box-shadow: 0px 0px 5px yellow;
-}
+
 
 body{
     background-color: silver;
+}
+
+.summary{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
 }
 
 nav, .catBtn_container{

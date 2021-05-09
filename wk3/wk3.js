@@ -14,7 +14,7 @@ function goWk2(){
 
 /* Toggle notes section */
 function showNotes(){
-    const notes = document.getElementById("wk2Notes_section");
+    const notes = document.getElementById("wk3Notes_section");
     const notesBtn = document.getElementById("notesBtn");
     const exercisesBtn = document.getElementById("exercisesBtn");
     const questionsBtn = document.getElementById("questionsBtn");
@@ -33,7 +33,7 @@ function showNotes(){
 
 /* Toggle exercises section */
 function showExercises(){
-    const exercises = document.getElementById("wk2Exercises_section");
+    const exercises = document.getElementById("wk3Exercises_section");
     if(exercises.style.display === "none"){
         exercises.style.display = "block";
         exercisesBtn.innerHTML = "Hide Exercises";
@@ -49,7 +49,7 @@ function showExercises(){
 
 /* Toggle questions section */
 function showQuestions(){
-    const questions = document.getElementById("wk2Questions_section");
+    const questions = document.getElementById("wk3Questions_section");
     if(questions.style.display === "none"){
         questions.style.display = "block";
         questionsBtn.innerHTML = "Hide Notes";
