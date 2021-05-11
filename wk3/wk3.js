@@ -139,8 +139,8 @@ function greeting({greet, firstName, course}){
         const number2 = Number(document.getElementById("number2").value);
         const displayResult = document.getElementById("numberBetweenResult");
 
-        let numberBetween =  number1 + (Math.floor(number2 * Math.random()));
-        displayResult.innerHTML = numberBetween;
+        const answer = Math.floor(Math.random() * (number2 - number1 + 1) + number1);
+        displayResult.innerHTML = answer;
     }
 
 // Date stuff
