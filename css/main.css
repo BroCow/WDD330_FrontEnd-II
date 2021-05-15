@@ -242,3 +242,16 @@ textarea:focus{
     font-size: 12px;
     margin-bottom: 5px;
 }
+
+.error{
+    display: none;
+}
+
+.check_radioInput{
+    width: 30px;
+    box-shadow: none;
+}
+
+.ageInput{
+    width: 20px;
+}

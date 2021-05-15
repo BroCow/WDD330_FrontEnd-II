@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 4</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <nav>
+        <button class="navBtn" id="homeBtn" onclick="goHome()">Home</button>
+        <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
+        <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
+        <button class="navBtn" id="week3Btn" onclick="goWk3()">Week 3</button>
+        <button class="navBtn" id="week4Btn" onclick="goWk4()">Week 4</button>
+    </nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 4</h1>
+    </header>
+
+    
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn" onclick="showNotes()">View Notes</button>
+        <button class="catBtn" id="exercisesBtn" onclick="showExercises()">View Exercises</button>
+        <button class="catBtn" id="questionsBtn" onclick="showQuestions()">View Questions</button>
+    </div>
+
+    <main>
+        <div class="summary">
+            <h4>Summary of Study</h4>
+            <p>Summary here...</p>
+        </div>
+        <section class="category_section" id="wk4Notes_section" style="display: none;">
+            <h2>Week 4 Notes</h2>
+            
+            <div class="sectionContent">
+                <h3>Novice to Ninja - Ch8: Forms</h3>
+                <h4>Chapter Topics</h4> 
+                <ul>
+                    <li>Form Controls</li>
+                    <li>Accessing Form Elements</li>
+                    <li>Form Properites and Methods</li>
+                    <li>Form Events</li>
+                    <li>Submitting a Form</li>
+                    <li>Retrieving and Changing Values From a Form</li>
+                    <li>Form Validation</li>
+                    <li>Our Project - Add a Form for Answering the Questions</li>
+                </ul>
+                <h4>Forms</h4>
+                <hr>
+                <p>Processing on frontend using Javascript becoming more common</p>
+
+                <h4>A Searching Example</h4>
+                <hr>
+                <form action="/search" name="search">
+                    <input type="text" name="searchInput" id="inputTest">
+                    <button type="submit">Search</button>
+                    <button type="reset">Reset</button>
+                </form>
+                <div id="focusMessage"></div>
+                <div id="blurMessage"></div>
+                <div id="changeMessage"></div>
+                <p>form.submit() - submits form automatically</p>
+                <p>Forms can be submitted manually by user using the below methods:</p>
+                <ul>
+                    <li>button type = 'submit'</li>
+                    <li>input type = 'submit' value = 'Submit'</li>
+                    <li>input type = 'image' src = 'button.png'</li>
+                </ul>
+                <p>form.reset() - resets form controls to initial values, or a button can be used
+                    with type = 'reset'. (Be careful with these!)
+                </p>
+                
+                <p>form.action = send to another url</p>
+                <h5><strong>Focus Event Example - Place cursor within the input field of form above to trigger <q>focus</q> event listener!</strong></h5>
+                <h5><strong>Blur Event Example - Place cursor within the input field, then move it away without changing anything to trigger <q>blur</q> event listener!</strong></h5>
+                <h5><strong>Change Event Example - Enter some information within the input field of form above, then move cursor away to trigger <q>change</q> event listener!</strong></h5>
+                <h4>Form Controls</h4>
+                <p>The superhero information you enter will be added to an object and shown below:</p>
+                <div id="heroInfoDisplay"></div>
+                <form action="" id="heroForm">
+                    <span>The hero name must be entered to enable the submit button!</span>
+                    <br>
+                    <label for="heroName">Name:
+                    <input type="text" id="heroName" name="heroName" autofocus placeholder="Your Superhero Name" maxlength="32" required>
+                    </label>
+                    <br>
+                    <span>If hero name begins with an <q>X</q>, JS will automatically detect that and let you know that is not valid!</span>
+                    <div id="noX"></div>
+                    <br>
+                    <label for="realName">Real Name:
+                    <input type="password" id="realName" name="realName">
+                    </label>
+                    <p>Super Powers:</p>
+                    
+                    <input class="check_radioInput" type="checkbox" id="flight" value="Flight" name="powers">
+                    <label for="flight">Flight:</label><br>
+                    
+                    <input class="check_radioInput" type="checkbox" id="strength" value="Strength" name="powers">
+                    <label for="strength">Super Strength:</label><br>
+
+                    <input class="check_radioInput" type="checkbox" id="speed" value="Speed" name="powers">
+                    <label for="speed">Speed:</label><br>
+
+                    <input class="check_radioInput" type="checkbox" name="powers" id="energy" value="Energy">
+                    <label for="energy">Energy Blasts:</label><br>
+
+                    <input class="check_radioInput" type="checkbox" id="telekinesis" value="Telekinesis" name="powers">
+                    <label for="telekinesis">Telekinesis:</label><br>
+
+                    <p>What type of hero are you?</p>
+                    
+                    <input class="check_radioInput" type="radio" name="category" value="Hero" id="hero">
+                    <label for="hero">Hero:</label>
+
+                    <input class="check_radioInput" type="radio" name="category" value="Villian" id="villian">
+                    <label for="villian">Villian:</label>
+
+                    <input class="check_radioInput" type="radio" name="category" value="Anti-Hero" id="antiHero">
+                    <label for="antiHero">Anti-Hero:</label><br>
+                    <br>
+                    <label class="ageInput" for="age">Age:
+                        <input type="number" id="age" name="age" min="0" step="1">
+                    </label>
+                    <p>
+                    <label for="file">Secret Superhero File Upload:
+                        <input type="file" name="file" id="file">
+                    </label>
+                    </p>
+                    <p>
+                    <label for="city">Base of Operations:
+                        <select name="city" id="city">
+                            <option value="" selected>Choose a City</option>
+                            <option value="Metropolis">Metropolis</option>
+                            <option value="Gotham City">Gotham City</option>
+                            <option value="Keystone City">Keystone</option>
+                            <option value="Coast City">Coast City</option>
+                            <option value="Star City">Star City</option>
+                        </select>
+                    </label>
+                    </p>
+                    <label for="origin">Enter superhero origin story below:
+                        <textarea id="origin" name="origin" rows="20" cols="60"></textarea>
+                    </label>
+                    <br>
+                    <button type="reset">Reset</button>
+                    <button type="submit" id="submit" disabled>Submit</button>
+                </form>
+                <p>We’ve successfully created a JavaScript object from form inputs that could then be used in the rest of our program. In this example we’ve used the JSON.stringify() method to convert the object into a JSON representation of the object, which could then be stored in a database or exported to an external web service.</p>
+
+                <h4>Form Validation</h4>
+                <hr>
+                <p>Always use both client and server side validation - JS should not be relied on to validate data before sending to database</p>
+                <p>Client-side validation with JS improves UX and increases valid data being sent to server</p>
+
+
+                <h3>Novice to Ninja - Ch12: Object-Oriented Programming iin JavaScript</h3>
+                <h4>Chapter Topics</h4> 
+                <ul>
+                    <li>Intro to OOP</li>
+                    <li>Using classes in JS</li>
+                    <li>Prototypes</li>
+                    <li>Public and private methods</li>
+                    <li>Inheritance</li>
+                    <li>Creating objects from objects</li>
+                    <li>Adding methods to built-in objects</li>
+                    <li>Mixins</li>
+                    <li>Chaining functions</li>
+                    <li>This and that</li>
+                    <li>Borrowing methods from prototypes</li>
+                    <li>Our project - create questions in an OOP way</li>
+                </ul>
+                <h4>Object-Oriented Programming</h4>
+                <p>Three main concepts in OOP:</p>
+                <ul>
+                    <li>encapsulation</li>
+                    <li>polymorphism</li>
+                    <li>inheritance</li>
+                </ul>
+                <p>Encapsulation: the inner workings are kept hidden inside the object and only the essential functionalities are exposed to the end user, such as the “on” button.</p>
+                <p>Polymorphism: the same process can be used for different objects.</p>
+                <p>Inheritance: taking the features of one object then adding some new features.</p>
+                <p>Class-based languages - Use a class to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class.</p>
+                <p>Prototype- based language - Uses the concept of using actual objects as the blueprint for creating more objects.</p>
+
+                <h4>Constructor Functions</h4>
+                <p>Constructor Function - a function that defines the properties and methods of an object</p>
+                <p>Easiest way to create a new object is to use the literal syntax</p>
+                <p>ES6 Class Update - class declaration syntax (see example in wk4.js)</p>
+
+                <h4>Static Methods</h4>
+                <p>Static Methods - called by the class directly rather than by instances of the class.</p>
+                <p>Static methods are not available to instances of the class</p>
+
+                <h4>Prototypal Inheritance</h4>
+                <p>Every class has a prototype property that is shared by every instance of the class.</p>
+                <h5>Ninja Turtles Example</h5>
+                <p>Select which Ninja Turtle you want to work with:</p>
+                <select name="turtleName" id="turtleName">
+                    <option value="" selected>Select a Turtle</option>
+                    <option value="Leonardo">Leonardo</option>
+                    <option value="Rafael">Rafael</option>
+                    <option value="Donatello">Donatello</option>
+                    <option value="Michelangleo">Michelangleo</option>
+                </select>
+                <div id="turtleGreeting"></div>
+                <p>Select which Ninja Turtle weapon you want to fight with:</p>
+                <select name="turtleWeapon" id="turtleWeapon">
+                    <option value="" selected>Select a Weapon</option>
+                    <option value="Katana">Katana</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Nun-Chucks">Nun-Chucks</option>
+                    <option value="Sai">Sai</option>
+                </select>
+                <div id="selectedWeapon"></div>
+                <p>Cannot overwrite a prototype by assigning it a new object literal</p>
+                <p>To change inherited property, just assign a new value (leo.weapon = 'katana')</p>
+                <p>Use <q>prototype</q> to add new properties/methods after class has been declared</p>
+
+                <h3>Novice to Ninja - Ch15: Modern JavaScript Development</h3>
+                <h4>Chapter Topics</h4> 
+                <ul>
+                    <li>Libraries</li>
+                    <li>Modular JavaScript</li>
+                    <li>MVC Frameworks</li>
+                    <li>Package Managers</li>
+                    <li>Optimizing your Code with Minification</li>
+                    <li>Build Processes Using WebPack</li>
+                </ul>
+                <h4>Libraries</h4>
+                <p>jQuery - very popular and helpful; would be good to learn</p>
+                <p>Vanilla JS faster - recent trend moving back towards it</p>
+
+                <h4>Modular JavaScript</h4>
+                <p>The code in a module should have a single purpose, and group together functions with distinct functionality.</p>
+                <p>Keeping code modular helps to make it more <strong>loosely coupled</strong>  and interchangeable, meaning you can easily swap one module for another without affecting other parts of a project.</p>
+                <p>Coupling - Two pieces of code are said to be tightly coupled if one relies on the other to run. This often occurs if a piece of code makes hard-coded references to another piece of code, requiring it to be used.</p>
+                <p>ES6 - Added use of modules to JS</p>
+                <ul>
+                    <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.</li>
+                    <li>A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.</li>
+                    <li>The value of this in the top level of a module is undefined, rather than the global object.</li>
+                    <li>You can’t use HTML-style comments in modules (although this isn’t very common in any JavaScript program these days).</li>
+                </ul>
+                <p>Export keyword - sets functions up for ability to be imported</p>
+                <p>Importing - can import single functions, or all functions using * and a name that creates a namespace for all the functions</p>
+                
+                <h3>MVC Frameworks</h3>
+                <p>Models</p>
+                <ul>
+                    <li>CRUD tasks - creating, reading, updating, deleting</li>
+                </ul>
+                <p>Views</p>
+                <ul>
+                    <li>Visual representation of the model</li>
+                    <li>Provides user interaction - usually through forms</li>
+                </ul>
+                <p>Controllers</p>
+                <ul>
+                    <li>Link models and views together</li>
+                    <li>Respond to events - usually inputs from users</li>
+                    <li>Process info and update model/view</li>
+                    <li>Respond to event from user, then inform model task completed - model then updates info about that task</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="category_section" id="wk4Exercises_section" style="display: none;">
+            <h2>Week 4 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk4Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk4Exercises_ol">
+                    <h4>h4 (exercise title</h4>
+                    <hr>
+                    <li class="category_li" id="wk4Exercise1_li">
+                        <a href="">Exercise link</a>
+                    </li>
+                    
+                    <p><strong>Additional exercises are included within the Notes section that demonstrate topics learned.</strong></p>
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="wk4Questions_section" style="display: none;">
+            <h2>Week 4 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk4Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk4Questions_ol">
+                    <h4>Ch8 - Forms</h4>
+                    <hr>
+                    <li class="category_li">
+                        When would you want to automatically submit a form using form.submit()?
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                    <li class="category_li">
+                        I couldn't get any of the "accessing form elements" methods to work for triggering the focus event listener.  Had 
+                        to use document.getElementById for it to work.  Why?
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="wk4.js"></script>
+    
+</body>
+</html>
