@@ -266,4 +266,4 @@ class Turtle {
             console.log("No weapon?");
         }
     }
-
+ 

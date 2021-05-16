@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8 - Form Focus</title>
+    <link rel="stylesheet" href="/wd330/css/main.css">
+</head>
+<body>
+    <section class="category_section" id="wk4Exercises_section">
+        <div class="sectionContent">
+            <h4>Novice to Ninja - Chapter 8 Form Focus</h4>
+            <p>The form input below triggers the following event listeners and displays an indication message:</p>
+            <ul>
+                <li>Focus - Activated when cursor placed within input</li>
+                <li>Blur - Activated when cursor moved out of input without a change occuring</li>
+                <li>Change - Activiated when cursor moved out of input after a change has occured within the input</li>
+            </ul>
+            <form action="/search" name="search">
+                <input type="text" name="searchInput" id="inputTest">
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </form>
+            <div id="focusMessage"></div>
+            <div id="blurMessage"></div>
+            <div id="changeMessage"></div>
+        </div>
+    </section>
+
+    <section class="category_section">
+        <div class="sectionContent">
+            <h4>Form Controls</h4>
+            <p>The superhero information you enter will be added to an object and shown below:</p>
+            <div id="heroInfoDisplay"></div>
+            <form action="" id="heroForm">
+                <span>The hero name must be entered to enable the submit button!</span>
+                <br>
+                <label for="heroName">Name:
+                <input type="text" id="heroName" name="heroName" autofocus placeholder="Your Superhero Name" maxlength="32" required>
+                </label>
+                <br>
+                <span>If hero name begins with an <q>X</q>, JS will automatically detect that and let you know that is not valid!</span>
+                <div id="noX"></div>
+                <br>
+                <label for="realName">Real Name:
+                <input type="password" id="realName" name="realName">
+                </label>
+                <p>Super Powers:</p>
+                
+                <input class="check_radioInput" type="checkbox" id="flight" value="Flight" name="powers">
+                <label for="flight">Flight:</label><br>
+                
+                <input class="check_radioInput" type="checkbox" id="strength" value="Strength" name="powers">
+                <label for="strength">Super Strength:</label><br>
+
+                <input class="check_radioInput" type="checkbox" id="speed" value="Speed" name="powers">
+                <label for="speed">Speed:</label><br>
+
+                <input class="check_radioInput" type="checkbox" name="powers" id="energy" value="Energy">
+                <label for="energy">Energy Blasts:</label><br>
+
+                <input class="check_radioInput" type="checkbox" id="telekinesis" value="Telekinesis" name="powers">
+                <label for="telekinesis">Telekinesis:</label><br>
+
+                <p>What type of hero are you?</p>
+                
+                <input class="check_radioInput" type="radio" name="category" value="Hero" id="hero">
+                <label for="hero">Hero:</label>
+
+                <input class="check_radioInput" type="radio" name="category" value="Villian" id="villian">
+                <label for="villian">Villian:</label>
+
+                <input class="check_radioInput" type="radio" name="category" value="Anti-Hero" id="antiHero">
+                <label for="antiHero">Anti-Hero:</label><br>
+                <br>
+                <label class="ageInput" for="age">Age:
+                    <input type="number" id="age" name="age" min="0" step="1">
+                </label>
+                <p>
+                <label for="file">Secret Superhero File Upload:
+                    <input type="file" name="file" id="file">
+                </label>
+                </p>
+                <p>
+                <label for="city">Base of Operations:
+                    <select name="city" id="city">
+                        <option value="" selected>Choose a City</option>
+                        <option value="Metropolis">Metropolis</option>
+                        <option value="Gotham City">Gotham City</option>
+                        <option value="Keystone City">Keystone</option>
+                        <option value="Coast City">Coast City</option>
+                        <option value="Star City">Star City</option>
+                    </select>
+                </label>
+                </p>
+                <label for="origin">Enter superhero origin story below:
+                    <textarea id="origin" name="origin" rows="20" cols="60"></textarea>
+                </label>
+                <br>
+                <button type="reset">Reset</button>
+                <button type="submit" id="submit" disabled>Submit</button>
+            </form>
+        </div>
+    </section>
+    <script src="../wk4.js"></script>
+</body>
+</html>
