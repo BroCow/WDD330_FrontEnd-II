@@ -1,5 +1,4 @@
 
-
 function goHome(){
     location.href = "https://brocow.github.io/WDD330_FrontEnd-II/";
 }
@@ -18,6 +17,10 @@ function goWk3(){
 
 function goWk4(){
     location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk4/";
+}
+
+function goWk5(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk5/";
 }
 
 /* Toggle notes section */
