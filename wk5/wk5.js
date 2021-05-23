@@ -79,6 +79,20 @@ const seeError = document.getElementById('seeError');
 const userNumber = document.getElementById('userNumber');
 const userNumber2 = document.getElementById('userNumber2');
 
+userNumber.addEventListener("focus", clear, false);
+function clear(){
+    console.log("clear called");
+    seeResult.innerHTML = " ";
+    seeError.innerHTML = " ";
+}
+ 
+userNumber2.addEventListener("focus", clear2, false);
+function clear2(){
+    console.log("clear called");
+    seeResult2.innerHTML = " ";
+   // seeError2.innerHTML = " ";
+}
+
 function sqRootUserNumber(){
     console.log(userNumber.value);
     
@@ -117,16 +131,3 @@ function squareRoot(number) {
     return Math.sqrt(number);
 }
 
-userNumber.addEventListener("focus", clear, false);
-function clear(){
-    console.log("clear called");
-    seeResult.innerHTML = " ";
-    seeError.innerHTML = " ";
-}
- 
-userNumber2.addEventListener("focus", clear, false);
-function clear(){
-    console.log("clear called");
-    seeResult2.innerHTML = " ";
-   // seeError2.innerHTML = " ";
-}
