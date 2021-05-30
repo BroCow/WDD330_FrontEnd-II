@@ -7,35 +7,51 @@
     <title>Project 1: To-Do List</title>
     <link rel="stylesheet" href="toDo.css">
 </head>
+
+<header>
+    <hr>
+    <h1 class="headerH1">Project 1: ToDo List</h1>
+    <h5>Christopher Cowan - WDD 330</h5>
+    <hr>
+</header>
+
 <body>
-    <h1>To-Do List</h1>
- 
-    <form action="">
-        <input type="checkbox" id="example" name="example" value="example">
-        <label for="example">Example Checkbox</label>
-        <span>X</span>
+    
+    <div class="form_div">
+        <form action="">
+            <h1>Tasks & To-Do's</h1>
+            <input type="checkbox" id="example" name="example" value="example">
+            <label for="example" id="exampleLabel">Example Checkbox</label>
+            <span>X</span>
 
-        <!-- <div class="tasks"> -->
-        <div id="taskList"></div>
-        <!-- <div id="taskComplete"></div> -->
-        <!-- </div> -->
-        
+            <!-- <div class="tasks"> -->
+            <div id="taskList"></div>
+            <!-- <div id="taskComplete"></div> -->
+            <!-- </div> -->
+            
 
-        <div id="uiAction_Div">
-            <span id="tasksLeft">3 tasks left</span>
-            <div>
-            <button type="submit" id="all">All</button>
-            <button type="submit" id="active">Active</button>
-            <button type="submit" id="completed">Completed</button>
+            <div id="uiAction_Div">
+                <span id="tasksLeft">No tasks</span>
+                <div>
+                <button type="submit" id="all" name="all">All</button>
+                <button type="submit" id="active" name="active">Active</button>
+                <button type="submit" id="completed" name="completed">Completed</button>
+                </div>
             </div>
-        </div>
 
-        <label for="taskName">
-            <input type="text" id="taskName">
-            <button type="submit">+</button>
-        </label>
-        
-    </form>
+            
+            
+            <div class="newTask_div">
+            <button class="clearTaskBtn" onclick="clearTasks()">Clear All Tasks</button>
+            <label  for="taskName">
+                <input type="text" id="taskName">
+                <button type="submit" id="add" name="add">+</button>
+            </label>
+            </div>
+            
+            <div id="test"></div>
+        </form>
+    </div>
     <script src="toDo.js"></script>
 </body>
 </html>

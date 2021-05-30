@@ -224,7 +224,7 @@ class Turtle {
     attack(){
         return `Feel the power of my ${this.weapon}!!!`;
     }
-}
+} 
     // Above code can be used to create a new instance
     const leo = new Turtle('Leonardo');  // variable "leo" points to instance of the Turtle class
     

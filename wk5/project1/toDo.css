@@ -1,13 +1,77 @@
 
 
+.headerH1{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h5{
+    letter-spacing: 4px;
+}
+
+form{
+    min-width: 350px;
+    max-width: 600px;
+
+    padding: 1.5% 3%;
+
+    border: burlywood 10px solid;
+    border-style: groove;
+
+    background-color: cornsilk;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+}
+
+button{
+    border: burlywood 1px solid;
+    border-style: groove;
+    padding: 1%;
+}
+
+#all{
+    background-color: whitesmoke;
+}
+#active{
+    background-color: gold;
+}
+#completed{
+    background-color: lightgreen;
+}
+
 #uiAction_Div{
-    display: flex;
-    justify-content: space-between;
+    text-align: right;
     padding: 1%;
     border: 1px solid black;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 } 
+
+#tasksLeft{
+    float: left;
+}
 
 span{
     float: right;
+}
+
+.newTask_div{
+    text-align: right;
+}
+
+input{
+    margin-right: 1%;
+    font-size: 1.3em;
+}
+
+#add{
+    font-size: 1.3em;
+}
+
+.clearTaskBtn{
+    float: left;
+    border: firebrick 2px solid;
+    font-size: .5em;
 }
