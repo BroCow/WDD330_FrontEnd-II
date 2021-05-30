@@ -23,6 +23,10 @@ function goWk5(){
     location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk5/";
 }
 
+function goWk6(){
+    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk6/";
+}
+
 /* Toggle notes section */
 function showNotes(){
     const notes = document.getElementById("wk3Notes_section");
