@@ -39,3 +39,10 @@ console.log('localhost home page');
 } else {
     console.log('Must be a week page');
 }
+
+if(location.href === localHomeURL || location.href === githubHomeURL){
+    console.log(location.href);    
+    console.log('home page');
+    } else {
+        console.log('Must be a week page');
+}
