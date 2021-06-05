@@ -74,17 +74,72 @@ export function setNavBtnEventHandler(){
 /********** Week Pages - Show notes, exercises, questions button functions ***********/
 /* Toggle notes section */
 export function showNotes(){
-    const notes = document.getElementById("wk4Notes_section");
-    const notesBtn = document.getElementById("notesBtn");
-    
-    if(notes.style.display === "none"){
-        notes.style.display = "block";
-        notesBtn.innerHTML = "Hide Notes";
-        notesBtn.style.boxShadow = "0px 0px 5px yellow";
-    } 
-    else {
-        notes.style.display = "none";
-        notesBtn.innerHTML = "View Notes";
-        notesBtn.style.boxShadow = "0px 0px 5px black";
-    }  
+    const localHomeURL = "http://localhost/wd330/";
+    const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
+    if(location.href === localHomeURL || location.href === githubHomeURL){
+        console.log(location.href);    
+        console.log('home page');
+        } else {
+            console.log('Must be a week page');
+
+            const notes = document.getElementById("notesSection");
+            const notesBtn = document.getElementById("notesBtn");
+            
+            if(notes.style.display === "none"){
+                notes.style.display = "block";
+                notesBtn.innerHTML = "Hide Notes";
+                notesBtn.style.boxShadow = "0px 0px 5px yellow";
+            } 
+            else {
+                notes.style.display = "none";
+                notesBtn.innerHTML = "View Notes";
+                notesBtn.style.boxShadow = "0px 0px 5px black";
+            }  
+        }
+}
+ 
+
+/* Toggle exercises section */
+export function showExercises(){
+    const localHomeURL = "http://localhost/wd330/";
+    const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
+    if(location.href === localHomeURL || location.href === githubHomeURL){
+        console.log(location.href);    
+        console.log('home page');
+        } else {
+            const exercises = document.getElementById("exercisesSection");
+            if(exercises.style.display === "none"){
+                exercises.style.display = "block";
+                exercisesBtn.innerHTML = "Hide Exercises";
+                exercisesBtn.style.boxShadow = "0px 0px 5px yellow";
+            } 
+            else {
+                exercises.style.display = "none";
+                exercisesBtn.innerHTML = "View Notes";
+                exercisesBtn.style.boxShadow = "0px 0px 5px black";
+            }
+        }
+}
+
+
+/* Toggle questions section */
+export function showQuestions(){
+    const localHomeURL = "http://localhost/wd330/";
+    const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
+    if(location.href === localHomeURL || location.href === githubHomeURL){
+        console.log(location.href);    
+        console.log('home page');
+        } else {
+            const questions = document.getElementById("questionsSection");
+            if(questions.style.display === "none"){
+                questions.style.display = "block";
+                questionsBtn.innerHTML = "Hide Notes";
+                questionsBtn.style.boxShadow = "0px 0px 5px yellow";
+            } 
+            else {
+                questions.style.display = "none";
+                questionsBtn.innerHTML = "View Notes";
+                questionsBtn.style.boxShadow = "0px 0px 5px black";
+            }
+        }
 }

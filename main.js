@@ -1,5 +1,5 @@
 /** Import Global Array Variables **/
-import { wkNumberArray, wkVarNameArray, wkLinkArray, navBtnArray } from "./js/modules.js";
+import { wkNumberArray, wkVarNameArray, wkLinkArray, navBtnArray, showNotes, showExercises, showQuestions } from "./js/modules.js";
 
 // Import functions for dynamic nav buttons and links
 import { createWkVars_Links, createNavBtns, setNavBtnEventHandler, linkToWeek } from "./js/modules.js";
@@ -29,20 +29,12 @@ console.log(navBtnArray);
 // Call imported function to attach event handlers to nav buttons
 setNavBtnEventHandler();
 
-const localHomeURL = "http://localhost/wd330/";
-const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
-if(location.href === localHomeURL){
-console.log(location.href);    
-console.log('localhost home page');
-} else if(location.href === githubHomeURL){
-    console.log('GitHub home page');
-} else {
-    console.log('Must be a week page');
-}
+/***** Show/Hide Notes, Exercises, Questions Event Handlers *****/
+const notesBtn = document.getElementById('notesBtn');
+notesBtn.addEventListener('click', showNotes);
 
-if(location.href === localHomeURL || location.href === githubHomeURL){
-    console.log(location.href);    
-    console.log('home page');
-    } else {
-        console.log('Must be a week page');
-}
+const exercisesBtn = document.getElementById('exercisesBtn');
+exercisesBtn.addEventListener('click', showExercises);
+
+const questionsBtn = document.getElementById('questionsBtn');
+questionsBtn.addEventListener('click', showQuestions);
