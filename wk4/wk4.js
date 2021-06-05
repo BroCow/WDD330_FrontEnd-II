@@ -30,8 +30,6 @@
 function showNotes(){
     const notes = document.getElementById("wk4Notes_section");
     const notesBtn = document.getElementById("notesBtn");
-    const exercisesBtn = document.getElementById("exercisesBtn");
-    const questionsBtn = document.getElementById("questionsBtn");
     
     if(notes.style.display === "none"){
         notes.style.display = "block";

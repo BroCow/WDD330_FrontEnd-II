@@ -67,3 +67,24 @@ export function setNavBtnEventHandler(){
         );
     }
 }
+
+
+
+
+/********** Week Pages - Show notes, exercises, questions button functions ***********/
+/* Toggle notes section */
+export function showNotes(){
+    const notes = document.getElementById("wk4Notes_section");
+    const notesBtn = document.getElementById("notesBtn");
+    
+    if(notes.style.display === "none"){
+        notes.style.display = "block";
+        notesBtn.innerHTML = "Hide Notes";
+        notesBtn.style.boxShadow = "0px 0px 5px yellow";
+    } 
+    else {
+        notes.style.display = "none";
+        notesBtn.innerHTML = "View Notes";
+        notesBtn.style.boxShadow = "0px 0px 5px black";
+    }  
+}

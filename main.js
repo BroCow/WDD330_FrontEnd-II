@@ -28,3 +28,12 @@ console.log(navBtnArray);
 
 // Call imported function to attach event handlers to nav buttons
 setNavBtnEventHandler();
+
+const localHomeURL = "http://localhost/wd330/";
+const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
+if(location.href != localHomeURL || location.href != githubHomeURL){
+console.log(location.href);    
+console.log("Must be a week page");
+} else {
+    console.log('Must be the home page');
+}
