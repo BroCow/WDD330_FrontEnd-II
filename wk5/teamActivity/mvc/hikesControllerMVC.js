@@ -2,7 +2,7 @@
 
 import HikeModel from './HikeModel.js';
 import HikesView from './HikesView.js';
-
+ 
 // Hike controller
 export default class HikesController {
   constructor(parentId) {

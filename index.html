@@ -10,15 +10,8 @@
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-        <nav>
-            <button class="navBtn" id="homeBtn" onclick="goHome()">Home</button>
-            <button class="navBtn" id="week1Btn" onclick="goWk1()">Week 1</button>
-            <button class="navBtn" id="week2Btn" onclick="goWk2()">Week 2</button>
-            <button class="navBtn" id="week3Btn" onclick="goWk3()">Week 3</button>
-            <button class="navBtn" id="week4Btn" onclick="goWk4()">Week 4</button>
-            <button class="navBtn" id="week5Btn" onclick="goWk5()">Week 5</button>
-            <button class="navBtn" id="week6Btn" onclick="goWk6()">Week 6</button>
-        </nav>
+        <nav id="nav"></nav>
+
         
         <header>
             <h1>Chris Cowan's WDD-330 Portfolio</h1>
@@ -59,7 +52,8 @@
             
         </main>
 
-        <script src="./js/main.js" async defer></script>
+        <script src="main.js" type="module"></script>
+        <script src="home.js"></script>
 
     </body>
 </html>

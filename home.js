@@ -1,33 +1,3 @@
-
-
-function goHome(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/";
-}
-
-function goWk1(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk1/";
-}
-
-function goWk2(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk2/";
-}
-
-function goWk3(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk3/";
-}
-
-function goWk4(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk4/";
-}
-
-function goWk5(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk5/";
-}
-
-function goWk6(){
-    location.href = "https://brocow.github.io/WDD330_FrontEnd-II/wk6/";
-}
-
 // Dynamic table of contents
 const links = [
     {label:"Week 1", link: "https://brocow.github.io/WDD330_FrontEnd-II/wk1/"},
@@ -50,13 +20,3 @@ for(let i = 0; i < links.length; i++){
 
     document.getElementById(label).innerHTML = label;
 }
-
-
-
-
-
-
-
-
-
-//document.getElementById("w1href").innerHTML = links.label;
