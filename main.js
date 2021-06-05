@@ -31,9 +31,11 @@ setNavBtnEventHandler();
 
 const localHomeURL = "http://localhost/wd330/";
 const githubHomeURL = "https://brocow.github.io/WDD330_FrontEnd-II/";
-if(location.href != localHomeURL || location.href != githubHomeURL){
+if(location.href === localHomeURL){
 console.log(location.href);    
-console.log("Must be a week page");
+console.log('localhost home page');
+} else if(location.href === githubHomeURL){
+    console.log('GitHub home page');
 } else {
-    console.log('Must be the home page');
+    console.log('Must be a week page');
 }
