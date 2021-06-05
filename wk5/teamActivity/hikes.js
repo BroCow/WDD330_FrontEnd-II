@@ -32,7 +32,7 @@ const hikeList = [
       directions:
         "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to until you see the sign for Bechler Meadows on the left. Turn there. There is a parking area at the trailhead."
     }
-  ];
+  ]; 
   
   const imgBasePath = "//byui-cit.github.io/cit261/examples/";
   //on load grab the array and insert it into the page

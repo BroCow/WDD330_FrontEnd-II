@@ -36,7 +36,50 @@
         <p>(Welcome message delivered using <strong><q>Initialization Code</q></strong>)</p>
         <div class="summary">
             <h4>Summary of Study</h4>
-            <p>Summary here...</p>
+            <p><strong>This was an exciting week for me! I attacked my portfolio and did some MAJOR refactoring!!!</strong></p>
+            <p>Over the last few weeks I have learned a lot about how to work with JavaScript. This week I decided to take that knowledge
+                and drill into my portfolio. The way I had my code organized was terrible.</p>
+            <p>When I created my portfolio I tried using as much JS as possible, so instead of a typical navigation with links I created buttons
+                that called a function that would redirect to the page. This was cool, but as the semester progressed I found issues:
+                <ul>
+                    <li>Each week I had to manually create another button in the HTML for every single page in the portfolio</li>
+                    <li>Each button had it's own function to direct to the page, so I had a long list of functions that were almost identical</li>
+                    <li>Only the home page referenced the main.js file - the week pages only referenced their own .js file. Because of this the
+                        functions for the nav buttons had to be present in each week's .js file. So, every week I also had to update every single
+                        .js file with the new function.  I had the same code copied into multiple files!
+                    </li>
+                </ul>
+            </p>
+            <p>Another feature I implemented that I thought was cool but created an issue was my content buttons. Each week has buttons that are
+                used to show/hide the content for that week (i.e. Notes, Exercises, Questions). Very cool, but this had the same problem as the 
+                nav buttons. I had to copy the functions for the buttons into every single week, which led to having the same code over and over in
+                multiple files.
+            </p>
+            <p>To fix these issues, I wanted to develop some JS code that would accomplish three main goals:
+                <ol>
+                    <li>Dynamically create the nav buttons, including all associated attributes and text</li>
+                    <li>Move all the <q>nav button</q> and <q>content button</q> code to the main.js file so it wouldn't be repeated</li>
+                    <li>Create modules that the main.js file could use to simplify and organize the code</li>
+                </ol>
+                This was extremely challenging for me! Getting the nav buttons to be created across all the pages was especially difficult. There were
+                multiple functions, arrays, and variables that needed to be created and work together in order for them to function properly.
+                </p>
+
+            <p><strong>BUT I DID IT!</strong></p>
+            <p>Now, all I need to do is add a number to my <q>week number</q> array and <strong>BOOM!</strong> The new nav button is created
+            on every single page in the portfolio along with all its attributes, text, and associated link. So awesome!</p>
+            <p>I was also able to modularize my code and get both the nav and content buttons working the way I wanted. For me, this was a 
+            significant accomplishment.  It took a long time, a lot of patience, digging into resources, and <strong>I have no idea how many console.logs()!!!</strong> 
+            </p>
+            <p>For this week, I'm hoping that this work I have done on my portfolio can be credited as my exercises. It took most of my time this week
+                to accomplish this. I was still able to read the assigned chapters, but my notes are not as extensive as usual. I am looking forward 
+                to learning more about AJAX though!
+            </p>
+            <p>Thank you for a great class. I'm learning so much and my confidence with JS has improved a lot. I still have a long way to go, but I at
+                least feel like I'm moving and heading in the right direction!
+            </p>
+                
+            
         </div>
         <section class="category_section" id="notesSection">
             <h2>Week 7 Notes</h2>
