@@ -20,9 +20,9 @@
     <div class="form_div">
         <form action="">
             <h1>Tasks & To-Do's</h1>
-            <input type="checkbox" id="example" name="example" value="example">
+            <!-- <input type="checkbox" id="example" name="example" value="example">
             <label for="example" id="exampleLabel">Example Checkbox</label>
-            <span>X</span>
+            <span id="removeTask">X</span> -->
 
             <!-- <div class="tasks"> -->
             <div id="taskList"></div>
@@ -32,10 +32,10 @@
 
             <div id="uiAction_Div">
                 <span id="tasksLeft">No tasks</span>
-                <div>
-                <button type="submit" id="all" name="all">All</button>
-                <button type="submit" id="active" name="active">Active</button>
-                <button type="submit" id="completed" name="completed">Completed</button>
+                <div class="uiBtn_div">
+                    <button type="submit" id="all" name="all">All</button>
+                    <button type="submit" id="active" name="active">Active</button>
+                    <button type="submit" id="completed" name="completed">Completed</button>
                 </div>
             </div>
 
@@ -43,8 +43,8 @@
             
             <div class="newTask_div">
             <button class="clearTaskBtn" onclick="clearTasks()">Clear All Tasks</button>
-            <label  for="taskName">
-                <input type="text" id="taskName">
+            <label  for="taskName" id="taskLabel" name="taskLabel">
+                <input type="text" id="taskName" name="taskName">
                 <button type="submit" id="add" name="add">+</button>
             </label>
             </div>
@@ -52,6 +52,6 @@
             <div id="test"></div>
         </form>
     </div>
-    <script src="toDo.js"></script>
+    <script src="toDo2.js"></script>
 </body>
 </html>

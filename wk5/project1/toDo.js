@@ -40,7 +40,7 @@ class Task {
     }
 };
 
-
+  
 function markComplete(){
     console.log('checkbox change');
     
@@ -261,6 +261,7 @@ const view = {
         taskList.appendChild(taskComplete);
         
         taskList.appendChild(nextLine);  
+        
         
         //tasksLeft.innerHTML = taskCount + " tasks left";
     

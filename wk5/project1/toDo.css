@@ -43,25 +43,36 @@ button{
 }
 
 #uiAction_Div{
-    text-align: right;
+    /* text-align: right; */
     padding: 1%;
     border: 1px solid black;
+    margin-top: 20px;
     margin-bottom: 10%;
 } 
+.uiBtn_div{
+    text-align: right;
+}
 
 #tasksLeft{
     float: left;
 }
 
-span{
+/* span{
+    float: right;
+} */
+
+.removeTask{
+    margin-bottom: 20px;
     float: right;
 }
+
 
 .newTask_div{
     text-align: right;
 }
 
 input{
+    
     margin-right: 1%;
     font-size: 1.3em;
 }
@@ -75,3 +86,4 @@ input{
     border: firebrick 2px solid;
     font-size: .5em;
 }
+
