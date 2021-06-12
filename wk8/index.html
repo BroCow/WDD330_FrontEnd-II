@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 7</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <nav id="nav"></nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - <span id="week8Transform">Week 8</span> </h1>
+    </header>
+ 
+    
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn">View Notes</button>
+        <button class="catBtn" id="exercisesBtn">View Exercises</button>
+        <button class="catBtn" id="questionsBtn">View Questions</button>
+    </div>
+
+    <main>
+        
+        <div class="summary">
+            <h4 id="summaryOfStudy">Summary of Study</h4>
+            <p>This week I spent a lot of time working on my <q>Project 1 ToDo List</q> assignment
+            to get the rest of the functionality working. I appreciate the opportunity to do that
+            and re-submit, so I didn't want to waste it.</p>
+            <p>I was having trouble getting the local storage working with the functionality of completing
+                tasks and removing tasks, but I got it working (for the most part). I've still got a couple
+                bugs to work out, but it's much better than it was.
+            </p>
+            <h4><a href="https://brocow.github.io/WDD330_FrontEnd-II/wk5/project1/toDo2.html">Updated Project 1 <q>ToDo List</q></a></h4>
+            <p>I also spent some time trying to learn more about fetches, promises, and API's. The team activity 
+                was great practice. Unfortunately, involvement from my group members wasn't there this week but I 
+                was able to get through the core requirements on my own.
+            </p>
+            <h4><a href="https://brocow.github.io/WDD330_FrontEnd-II/wk8/teamActivity/remoteAPI.html">Week 8 Team Activity</a></h4>
+            <p>Other than that, I enjoyed reading about CSS tricks this week! I incorporated some of that fun stuff 
+                into this weeks page.
+            </p>  
+            
+        </div>
+
+        <section class="category_section" id="notesSection">
+            <h2>Week 8 Notes</h2>
+            
+            <div class="sectionContent">
+                <h3>HTML5 and CSS3 For the Real World - Chapter 8 </h3>
+                <h4>Chapter Topics</h4> 
+                <ul>
+                    <li>Transforms</li>  
+                    <li>Transitions</li>
+                </ul>
+                <h4>Transforms</h4>
+                <hr>
+                <p>Transforms don’t work on inline elements. Change to inline-block.</p>
+                <p>Typically used with HOVER, but can also be used by adding class with JS</p>
+
+                <h5 id="translate">Translate</h5>
+                <p>The translate(x,y) function moves an element x from the left, and y from the top:</p>
+
+                <h5 id="scaling">Scaling</h5>
+                <p>Similar to translate, but changes size.</p>
+                <p>Does not affect or change surrounding content</p>
+
+                <h5>Rotation</h5>
+                <p>Will rotate element by specified degrees</p>
+
+                <h5>Skew</h5>
+                <p>Skews text on X and Y axis</p>
+
+                <h4>Transitions</h4>
+                <p>native CSS transitions generally require less client-side processing, 
+                so they’ll usually appear smoother. On mobile devices with limited computing power, 
+                this can be a lifesaver.</p>
+                <p>Rather than writing out an animation in JavaScript, you can simply switch a property value 
+                    and rely on the browser to do all the heavy lifting.</p>
+                <h5>Transition Property</h5>
+                <p>The transition-property property defines the CSS properties of the element that should be transitioned, 
+                    with all for all properties being the default.</p>
+                <p>Any property changing from one value to another for which you can find a valid midpoint can be transitioned.</p>
+                <p>The list of properties that can be animated is found at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties</a>.</p>
+
+                <h5>Transition-Duration Property</h5>
+                <p>The transition-duration property sets how long the transition will take: <br>
+                    transition-duration: 0.2s;</p>
+                <p>200ms is generally considered the optimum time for a transition</p>
+
+                <h5>Transition-Timing-Function Property</h5>
+                <p>The most common timing functions include the key terms ease, linear, ease-in, ease-out, or ease-in-out.</p>
+
+                <h5>Transistion-Delay Property</h5>
+                <p>A 50ms delay is enough time to wait to be sure they are intentionally hovering</p>
+                
+                <h4>Animations</h4>
+                <p>CSS animations, unlike transitions, allow you to control each step of an animation via keyframes.</p>
+                <p>A keyframe is a snapshot that defines a starting or end point of any smooth transition.</p>
+                <p>The lack of powerful processors on many mobile devices makes CSS animations a great alternative to weighty, CPU-intensive JavaScript animation.</p>
+                <p>It’s still better to employ JavaScript for intricate, stateful UIs, and when you do, you’ll likely want to use a JavaScript animation library</p>
+
+                <h5>Keyframes</h5>
+                <p>To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property declaration block.</p>
+                <p>To create an animation, use the @keyframes rule for IE10+ and FF16+: <br>
+                    @keyframes myAnimation { <br>
+                        /* put animation keyframes here */ <br>
+                        }</p>
+                <p>Each keyframe looks like its own nested CSS declaration block. Instead of a tradi- tional selector, though, you use a percentage value, or a comma-separated list of percentage values</p>
+                <p>Keyframes can be specified in any order; it’s the percentage values rather than the order of the declarations that determine the sequence of keyframes in the animation.</p>
+
+                <h3>HTML5 and CSS3 For the Real World - Chapter 12 </h3>
+                <h4>Canvas</h4> 
+                <p>Set width and height as HTML attributes, not in CSS</p>
+                <p>No default styling, so usually want to add a border using CSS</p>
+                <p>All drawing on the canvas happens via the Canvas JavaScript API</p> 
+                <canvas id="myCanvas" class="myCanvas" width="200" height="200"></canvas>
+        
+
+                
+            </div>
+        </section>
+
+
+        <section class="category_section" id="exercisesSection" style="display: none;">
+            <h2>Week 8 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk8Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk8Exercises_ol">
+                    <h4>Novice to Ninja - Chapter  Exercises</h4>
+                    <hr>
+                    
+                    <ul>
+                        <a href=""><li>Exercise</li></a>
+                        
+                    </ul>
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="questionsSection" style="display: none;">
+            <h2>Week 8 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk8Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk8Questions_ol">
+                    <h4>Testing AJAX</h4>
+                    <hr>
+                    <li class="category_li">
+                        Questions
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="../main.js" type="module"></script>
+    <script src="wk8.js"></script>
+    
+</body>
+</html>

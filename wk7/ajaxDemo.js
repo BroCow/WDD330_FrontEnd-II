@@ -11,6 +11,7 @@ const responseP = document.getElementById('response');
 const textURL = 'http://numbersapi.com/random';
 const apiURL = 'https://api.chucknorris.io/jokes/random';
 
+
 //event handlers for buttons
 textButton.addEventListener('click', () => {
     fetch(textURL)

@@ -12,7 +12,8 @@ body{
 
 nav, .catBtn_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: whitesmoke;
 }
 
@@ -48,6 +49,7 @@ nav{
 
 .catBtn:hover{
     color: yellow;
+    transform: scale(2) rotate(10deg);
 }
 
 header{
@@ -254,4 +256,19 @@ textarea:focus{
 
 .ageInput{
     width: 20px;
+}
+
+/** Week 8 CSS Exercises **/
+
+#week8Transform:hover{
+    display: inline-block;
+    transform: translateY(40px);
+}
+
+#translate:hover {
+    transform: translateX(100px);
+}
+
+.myCanvas{
+    border: dotted blue 2px;
 }
