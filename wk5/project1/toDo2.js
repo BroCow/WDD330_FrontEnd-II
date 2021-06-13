@@ -340,7 +340,8 @@ function showCompletedTasks(){
             console.log('remove' + storedTasksArray[i].taskName + ' event listener triggered');
             storedTasksArray.splice(i, 1);
             JSON.parse(localStorage.getItem("all_tasks")).splice(i, 1);
-            
+            removeTask.innerHTML = "Task Removed"
+            removeTask.style.color = 'black';
             console.log('item removed');
         });
         
@@ -408,7 +409,8 @@ function showAllTasks(){
                 console.log('remove' + storedTasksArray[i].taskName + ' event listener triggered');
                 storedTasksArray.splice(i, 1);
                 JSON.parse(localStorage.getItem("all_tasks")).splice(i, 1);
-
+                removeTask.innerHTML = "Task Removed"
+                removeTask.style.color = 'black';
                 // localStorage.setItem("all_tasks", JSON.stringify(localStorage.getItem("all_tasks"))[i]);
                 
                 console.log('item removed');
@@ -455,8 +457,8 @@ function showAllTasks(){
                     console.log('remove' + storedTasksArray[i].taskName + ' event listener triggered');
                     storedTasksArray.splice(i, 1);
                     JSON.parse(localStorage.getItem("all_tasks")).splice(i, 1);
-
-                    //localStorage.setItem("all_tasks", JSON.stringify());
+                    removeTask.innerHTML = "Task Removed"
+                    removeTask.style.color = 'black';
                     
                     console.log('item removed');
                 });
@@ -524,6 +526,8 @@ function showActiveTasks(){
                 storedTasksArray.splice(i, 1);
                 JSON.parse(localStorage.getItem("all_tasks")).splice(i, 1);
                 
+                removeTask.innerHTML = "Task Removed"
+                removeTask.style.color = 'black';
                 console.log('item removed');
             });
             
