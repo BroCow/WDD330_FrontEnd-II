@@ -174,9 +174,13 @@ function add(taskName){
 
     
     view.render(newStoredTask);
-    //getNumberTasksLeft();
-    // let numberTasksLeft = storedTasksArray.length;
-    // tasksLeft.innerHTML = (numberTasksLeft) + ' tasks left!';
+    let c=0;
+    for(let i=0; i < storedTasksArray.length; i++){
+        if(storedTasksArray[i].completed === false){
+            c++;
+        }
+    }
+    tasksLeft.innerHTML = c + ' tasks left!';
         
 }
 // let storedArray = JSON.parse(localStorage.getItem("all_tasks"));
@@ -290,6 +294,7 @@ const view = {
     }
 };
 
+
 function showCompletedTasks(){
     taskList.innerHTML = " ";  // Clear any tasks that were added before showing complete list
 
@@ -297,6 +302,7 @@ function showCompletedTasks(){
     console.log(storedTasksArray.length);
     console.log(storedTasksArray);
     //getNumberTasksLeft();
+    
     for(let i=0; i < storedTasksArray.length; i++){
         if(storedTasksArray[i].completed === true){
         console.log('completed task found');
@@ -351,7 +357,13 @@ function showCompletedTasks(){
     }
     //getNumberTasksLeft();
     // let numberTasksLeft = storedTasksArray.length;
-    // tasksLeft.innerHTML = (numberTasksLeft) + ' tasks left!';
+    let c=0;
+    for(let i=0; i < storedTasksArray.length; i++){
+        if(storedTasksArray[i].completed === false){
+            c++;
+        }
+    }
+    tasksLeft.innerHTML = c + ' tasks left!';
 }
 
 function showAllTasks(){
@@ -467,9 +479,13 @@ function showAllTasks(){
                     taskList.appendChild(nextLine);
         }
     }
-    //getNumberTasksLeft();
-    // let numberTasksLeft = storedTasksArray.length - completedTasksArray.length;
-    // tasksLeft.innerHTML = (numberTasksLeft) + ' tasks left!';
+    let c=0;
+    for(let i=0; i < storedTasksArray.length; i++){
+        if(storedTasksArray[i].completed === false){
+            c++;
+        }
+    }
+    tasksLeft.innerHTML = c + ' tasks left!';
 }
 
 function showActiveTasks(){
@@ -535,7 +551,13 @@ function showActiveTasks(){
             taskList.appendChild(nextLine);
         }
     }
-    //getNumberTasksLeft();
+    let c=0;
+    for(let i=0; i < storedTasksArray.length; i++){
+        if(storedTasksArray[i].completed === false){
+            c++;
+        }
+    }
+    tasksLeft.innerHTML = c + ' tasks left!';
 }
 
 console.log(completedTasksArray);
