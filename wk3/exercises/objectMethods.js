@@ -12,7 +12,7 @@ const userInfo = {
 
         // userInfo[input] = nameInput;
 
-
+ 
         result.innerHTML = "Greetings " + this.name + ". You are " +
         this.age + "years old and live in " + this.location + "!";
     }

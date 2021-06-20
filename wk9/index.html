@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 9</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <nav id="nav"></nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 9</h1>
+    </header>
+ 
+    
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn">View Notes</button>
+        <button class="catBtn" id="exercisesBtn">View Exercises</button>
+        <button class="catBtn" id="questionsBtn">View Questions</button>
+    </div>
+
+    <main>
+        
+        <div class="summary">
+            <h4 id="summaryOfStudy">Summary of Study</h4>
+            <p>Summary</p>
+            
+            
+        </div>
+
+        <section class="category_section" id="notesSection">
+            <h2>Week 9 Notes</h2>
+            
+            <div class="sectionContent">
+                <h3>JavaScript: Novice to Ninja - Chapter 9, The Window Object</h3>
+                <h4>Chapter Topics</h4> 
+                <p>A browser window is an object - global variables are properties and functions are methods</p>
+                <ul>
+                    <li>The Browser Object Model</li>
+                    <li>Finding out browser information</li> 
+                    <li>Browser history</li>
+                    <li>Controlling windows</li>
+                    <li>Cookies</li>
+                    <li>Timing functions</li>
+                </ul>
+                <h4>The Browser Object Model</h4>
+                <hr>
+                <p>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.</p>
+                <p>The following code provides a quick way of assigning the variable global to the global object: <br>
+                    // from within the global scope
+                    const global = this;</p>
+                <h5>Going Global</h5>
+                <p>Global variables are variables that are created without using the const, let or var keywords. Global variables can be accessed in all parts of the program.</p>
+                <p>refer to global variables without using the window object; it’s less typing and your code will be more portable between environments.</p>
+                
+                <h5>Dialogs</h5>
+                <p>window.confirm('Do you wish to continue?');<br>
+                Stops program, gives OK or CANCEL, returns true or false</p>
+                <p>window.prompt('Please enter your name:');<br>
+                Stops program, request user entry, returns string or null on Cancel</p>
+
+                <h4>Browser Information</h4>
+                <hr>
+                <h5>Which Browser?</h5>
+                <p>The window object has a navigator property that returns a reference to the Navigator object</p>
+                <p>userAgent property will return information about the browser and operating system being used</p>
+                <p><strong>Click the button below to see what the userAgent knows about you!</strong></p>
+                <button id="userAgent">What am I using?</button>
+                <div id="userAgentResult"></div>
+
+                <h5>Location, Location, Location</h5>
+                <p>window.location property is an object that contains information about the URL of the current page</p>
+                <p>window.location.href returns current URL, and can also be used to redirect</p>
+                <p><strong>Click on the button below to see where it sends you using window.location.href!</strong></p>
+                <button id="locationHref">Where to?</button>
+                <p>window.location.hostname - returns domain of current URL</p>
+                <p>Pathname property - returns a string of the path that follows the domain:</p>
+                <p>reload() method - used to force reload of current page</p>
+                <p>The assign() method can be used to load another resource from a URL provided as a parameter, for example:</p>
+                
+                <h4>The Browser History</h4>
+                <p>window.history.length property shows how many pages have been visited before arriving at the current page</p>
+                <p>window.history.go(1); // goes forward 1 page <br>
+                    window.history.go(0); // reloads the current page <br>
+                    window.history.go(-1); // goes back 1 page</p>
+                
+                <h4>Controlling Windows</h4>
+                <p>I never want to use anything discussed in this section.  I hate pop-ups.</p>
+
+                <h4>Screen Information</h4>
+                <p>window.screen object contains information about the screen the browser is displayed on</p>
+                <p>window.screen.height <br>
+                    -- 1024 <br>
+                    window.screen.width <br>
+                    -- 1280</p>
+                <p>window.screen.availWidth <br>
+                    -- 1280 <br>
+                    window.screen.availHeight <br>
+                    -- 995</p>
+                
+                <h4>The Document Object</h4>
+                <h5>Cookies</h5>
+                <p>Small files saved on users computer</p>
+                <p>A restriction of cookies is that they can only be read by a web page from the same domain that set them</p>
+                <p>limited to storing up to 4KB of data, although 20 cookies are allowed per domain</p>
+                <p>Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users.</p>
+
+                <h5>Creating Cookies</h5>
+                <p>document.cookie = 'name=Superman'; <br>
+                    -- "name=Superman"</p>
+                <p>More cookies can be added - just extends the string</p>
+
+                <h5>Changing Cookie Values</h5>
+                <p>Just reassign it using the same name with different value: <br>
+                    document.cookie = 'name=Batman' <br>
+                    -- "name=Batman"
+                </p>
+                
+                <h4>Timing Functions</h4>
+                <p>The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.</p>
+                <p>window.setTimeout() - callback function as first parameter, milliseconds as second parameter</p>
+                <p><strong>Click the button below, count to five, and then you'll see a message!</strong></p>
+                <button id="timeout">Timeout Function</button>
+                <div id="timeoutResult"></div>
+                <p>window.setInterval() will repeatedly invoke the callback function after every given number of milliseconds.</p>
+
+                <h5>Animation</h5>
+                <p><strong>Click on the button below to see something amazing happen to the red square!</strong></p>
+                <button id="animate">Animate Square</button>
+                <div id="intervalMessage"></div>
+                <div id="square"></div>
+
+                <p><strong>Click on the button below to see something amazing happen to the yellow square!</strong></p>
+                <button id="animate2">Animate Square</button>
+                <div id="requestAnimationMessage"></div>
+                <div id="square2"></div>
+                
+
+            </div>
+        </section>
+
+
+        <section class="category_section" id="exercisesSection" style="display: none;">
+            <h2>Week 9 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk9Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk9Exercises_ol">
+                    <h4>Novice to Ninja - Chapter 9/14 Exercises</h4>
+                    <hr>
+                    <p>p element</p>
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="questionsSection" style="display: none;">
+            <h2>Week 9 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk9Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk8Questions_ol">
+                    <h4>h4</h4>
+                    <hr>
+                    <li class="category_li">
+                        How exactly is window.location.assign used?  It says it can be used to load
+                        another resource from a URL, but what does that mean?
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="../main.js" type="module"></script>
+    <script src="wk9.js"></script>
+    
+</body>
+</html>

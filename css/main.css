@@ -272,3 +272,11 @@ textarea:focus{
 .myCanvas{
     border: dotted blue 2px;
 }
+
+/** Week 9 Animation **/
+#square {
+    margin: 25px;
+    width: 100px;
+    height: 100px;
+    background: red;
+}

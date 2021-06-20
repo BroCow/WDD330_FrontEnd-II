@@ -3,7 +3,7 @@
 function Human(age){
     this.age = age;
 }
-
+ 
 let greg = new Human(22);
 let thomas = new Human(24);
 
