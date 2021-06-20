@@ -15,7 +15,7 @@
         <h1>Chris Cowan's WDD-330 Portfolio - Week 9</h1>
     </header>
  
-    
+     
     <div class="catBtn_container">
         <button class="catBtn" id="notesBtn">View Notes</button>
         <button class="catBtn" id="exercisesBtn">View Exercises</button>
@@ -26,9 +26,14 @@
         
         <div class="summary">
             <h4 id="summaryOfStudy">Summary of Study</h4>
-            <p>Summary</p>
+            <p>
+            I completed the reading, but most of my notes were focused on Chapter 9.  I'm super interested in Chapter 14 though, so I want to go over it again and get some good notes done. 
+
+            <p>I started working on what I think I want to do for Project 2, but then I saw that we have to use a 3rd Party API and I'm not sure how to integrate one with the app I have in mind.</p> 
             
-            
+            <p>This week I had a weird issue with my terminal that I couldn't resolve.  It randomly stopped letting me access my XAMPP folder in Applications, which is where I have all my files.  I get a "no such file or directory" message even though it's there.  It started working again, then just stopped while I was working on the Modern Workflow assignment.
+            It's working now, but I don't know if it was something I did to fix it or what.  Crazy.</p> 
+            </p>
         </div>
 
         <section class="category_section" id="notesSection">
@@ -68,14 +73,14 @@
                 <p>The window object has a navigator property that returns a reference to the Navigator object</p>
                 <p>userAgent property will return information about the browser and operating system being used</p>
                 <p><strong>Click the button below to see what the userAgent knows about you!</strong></p>
-                <button id="userAgent">What am I using?</button>
+                <button class="exampleBtn9" id="userAgent">What am I using?</button>
                 <div id="userAgentResult"></div>
 
                 <h5>Location, Location, Location</h5>
                 <p>window.location property is an object that contains information about the URL of the current page</p>
                 <p>window.location.href returns current URL, and can also be used to redirect</p>
                 <p><strong>Click on the button below to see where it sends you using window.location.href!</strong></p>
-                <button id="locationHref">Where to?</button>
+                <button class="exampleBtn9" id="locationHref">Where to?</button>
                 <p>window.location.hostname - returns domain of current URL</p>
                 <p>Pathname property - returns a string of the path that follows the domain:</p>
                 <p>reload() method - used to force reload of current page</p>
@@ -123,22 +128,15 @@
                 <p>The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.</p>
                 <p>window.setTimeout() - callback function as first parameter, milliseconds as second parameter</p>
                 <p><strong>Click the button below, count to five, and then you'll see a message!</strong></p>
-                <button id="timeout">Timeout Function</button>
+                <button class="exampleBtn9" id="timeout">Timeout Function</button>
                 <div id="timeoutResult"></div>
                 <p>window.setInterval() will repeatedly invoke the callback function after every given number of milliseconds.</p>
 
                 <h5>Animation</h5>
                 <p><strong>Click on the button below to see something amazing happen to the red square!</strong></p>
-                <button id="animate">Animate Square</button>
+                <button class="exampleBtn9" id="animate">Animate Square</button>
                 <div id="intervalMessage"></div>
                 <div id="square"></div>
-
-                <p><strong>Click on the button below to see something amazing happen to the yellow square!</strong></p>
-                <button id="animate2">Animate Square</button>
-                <div id="requestAnimationMessage"></div>
-                <div id="square2"></div>
-                
-
             </div>
         </section>
 
@@ -148,10 +146,14 @@
             <div class="sectionContent">
                 <h3 class="category_header" id="wk9Exercises_header">Exercises</h3>
                 <ol class="category_ol" id="wk9Exercises_ol">
-                    <h4>Novice to Ninja - Chapter 9/14 Exercises</h4>
+                    <h4>Project 2 Start - Bluebook Project</h4>
                     <hr>
-                    <p>p element</p>
+                    <p><a href="https://brocow.github.io/WDD330_FrontEnd-II/bluebook/yellowpage.html">Bluebook Project</a></p>
                 </ol>
+                <p>Below is a picture of a "bluebook" that is used by our apprentices to track their on-the-job hours and classroom hours. When they complete a certain amount of hours they qualify for advancement. These paper books are confusing for the apprentices to complete and there are always math errors which delay their processing. I want to create an app that duplicates this which would make it easier for them to complete this requirement.</p>
+                <div id="bbPicDiv">
+                    <img src="../bluebook/bbPic.jpg" alt="bluebook picture">
+                </div>
             </div>
         </section>
 
@@ -169,6 +171,7 @@
                         <br>
                         <strong>Answer:  </strong>
                     </li>
+                    <li>Is there a popular provider of APIs?  It seems like there is an endless number of them from different creators.  I'm wondering if some are better than others.</li>
                 </ol>
             </div>
         </section>
