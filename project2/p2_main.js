@@ -7,6 +7,9 @@ const cut = document.getElementById('cut');
 
 const outputDiv = document.getElementById('output');
 const basicInfoDiv = document.getElementById('basicInfoDiv');
+const plotInfoDiv = document.getElementById('plotInfoDiv');
+const ratingsInfoDiv = document.getElementById('ratingsInfoDiv');
+
 const body = document.getElementById('body');
 const poster = document.getElementById('poster');
 const searchField = document.getElementById('searchField');
@@ -55,6 +58,8 @@ function getData(result){
     
     showPoster();
     showBasicInfo();
+    showPlotInfo();
+    showRatingsInfo();
     
     titleInput.value = " ";
 }
@@ -173,78 +178,65 @@ function showBasicInfo(){
     basicInfoDiv.appendChild(p_runtime);
 }
 
-// function removeBasicInfoDivInfo(){
-//     let h3 = document.querySelector('.infoHeader');
-//     if(h3 != null){
-//         // h3.remove();
-//         // p_title.remove();
-//         // p_year.remove();
-//         // p_rated.remove();
-//         // p_released.remove
-//     }
-    
-//     let p_children = document.getElementsByClassName('basicInfo');
-//     console.log(p_children);
-//     for(let i=0; i<p_children.length; i++){
-//         p_children[i].remove();
-//         console.log('removed ' + p_children[i]);
-//     }
-// }
+function showPlotInfo(){
+    console.log('show plot info called');
+
+    let plot = movieData.Plot;
+    console.log(movieData.Plot);
+
+    plotInfoDiv.setAttribute('class', 'infoDiv');
+
+    let removeH3 = document.querySelector('#plotInfoH3');
+    if(removeH3 != null){
+        removeH3.remove();
+    }
+
+    let plotInfoHeader = document.createElement('h3');
+    plotInfoHeader.setAttribute('class', 'infoHeader');
+    plotInfoDiv.setAttribute('id', 'plotInfoH3');
+    plotInfoHeader.innerHTML = 'Plot Information';
+    plotInfoDiv.appendChild(plotInfoHeader);
+
+    let removePlot = document.getElementById('moviePlot');
+    if(removePlot != null){
+        removePlot.remove();
+    }
+    let p_plot = document.createElement('p');
+    p_plot.setAttribute('class', 'plotInfo');
+    p_plot.setAttribute('id', 'moviePlot');
+    p_plot.innerHTML = plot;
+    plotInfoDiv.appendChild(p_plot);
+}
+
+function showRatingsInfo(){
+    console.log('show ratings info called');
+
+    let ratings = movieData.Ratings;
+    console.log(movieData.Ratings);
+    const imdRating = ratings[0];
+
+    ratingsInfoDiv.setAttribute('class', 'infoDiv');
+
+    let removeH3 = document.querySelector('#ratingsInfoH3');
+    if(removeH3 != null){
+        removeH3.remove();
+    }
+
+    let ratingsInfoHeader = document.createElement('h3');
+    ratingsInfoHeader.setAttribute('class', 'infoHeader');
+    ratingsInfoDiv.setAttribute('id', 'ratingsInfoH3');
+    ratingsInfoHeader.innerHTML = 'Ratings Information';
+    plotInfoDiv.appendChild(ratingsInfoHeader);
+
+    let removeImdRating = document.getElementById('imdRating');
+    if(removeImdRating != null){
+        removeImdRating.remove();
+    }
+    let p_imdRating = document.createElement('p');
+    p_imdRating.setAttribute('class', 'ratingsInfo');
+    p_imdRating.setAttribute('id', 'imdRating');
+    p_imdRating.innerHTML = 'Source: ' + imdRating.Source + '<br>' + 'Rated: ' + imdRating.Value;
+    plotInfoDiv.appendChild(p_imdRating);
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function showMovieData(dataResults){
-//     const results = dataResults;
-//     console.log(results);
-    // const movieDataList = document.getElementById('movieDataList');
-
-    // const shipNameUL = document.createElement('ul');
-    // shipNameUL.setAttribute('id', results.name);
-    // shipNameUL.innerHTML = results.name;
-    // shipDataList.appendChild(shipNameUL);
-
-    // const shipNameById = document.getElementById(results.name);
-
-    // const manufacturerLI = document.createElement('li');
-    // manufacturerLI.innerHTML = results.manufacturer;
-    // shipNameById.appendChild(manufacturerLI);
-
-    // const lengthLI = document.createElement('li');
-    // lengthLI.innerHTML = results.length;
-    // shipNameById.appendChild(lengthLI);
-//}
-
-// /*** Display data results ***/
-// function showMovieData(dataResults){
-//     const results = dataResults;
-//     const shipDataList = document.getElementById('shipDataList');
-
-//     const shipNameUL = document.createElement('ul');
-//     shipNameUL.setAttribute('id', results.name);
-//     shipNameUL.innerHTML = results.name;
-//     shipDataList.appendChild(shipNameUL);
-
-//     const shipNameById = document.getElementById(results.name);
-
-//     const manufacturerLI = document.createElement('li');
-//     manufacturerLI.innerHTML = results.manufacturer;
-//     shipNameById.appendChild(manufacturerLI);
-
-//     const lengthLI = document.createElement('li');
-//     lengthLI.innerHTML = results.length;
-//     shipNameById.appendChild(lengthLI);
-// }

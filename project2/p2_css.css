@@ -96,6 +96,6 @@ input{
     color: yellow;
 }
 
-.basicInfo{
+.basicInfo, .plotInfo, .ratingsInfo{
     color: white;
 }
