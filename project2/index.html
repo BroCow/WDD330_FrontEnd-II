@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="p2_css.css">
+</head>
+<body id="body" onload="animateTitle()">
+    <h1><span class="the">The</span><span id="movieMonster"> Movie Monster</span> </h1>
+    
+    <div class="cutDiv">
+        <img id="cut" src="cut.png" alt="" style="display: block;">
+    </div>
+
+    <div id="movieDataList"></div>
+    <div class="posterDiv">
+        <img id="poster"  alt="">
+    </div>
+
+    <!-- Move to middle of screen - should hide after search -->
+    <div class="searchField" >
+        <input id="title" name="title" type="text" placeholder="Enter title of movie!" style="display: block;">
+        <button id="search" style="display: block;">Search</button>
+    </div>
+
+    <button id="newSearchBtn">New Search</button>
+
+    
+    
+
+    <div id="basicInfoDiv"></div>
+    
+
+    <div id="output"></div>
+
+    
+    
+
+    <footer>
+        <button class="pageNav" id="prevBtn" style="display: none;">Previous</button>
+        <button class="pageNav" id="nextBtn" style="display: none;">Next</button>
+    </footer>    
+    <script src="p2_main.js"></script>
+</body>
+</html> 
