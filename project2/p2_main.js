@@ -46,7 +46,7 @@ searchBtn.addEventListener('click', () => {
     })  
     // Pass data to getData function that will display info
     .then(data => getData(data))
-    
+     
     .catch(error => console.log('There was an error:', error))
 },false);
 
@@ -214,6 +214,8 @@ function showRatingsInfo(){
     let ratings = movieData.Ratings;
     console.log(movieData.Ratings);
     const imdRating = ratings[0];
+    const rtRating = ratings[1];
+    const metaRating = ratings[2];
 
     ratingsInfoDiv.setAttribute('class', 'infoDiv');
 
@@ -237,6 +239,18 @@ function showRatingsInfo(){
     p_imdRating.setAttribute('id', 'imdRating');
     p_imdRating.innerHTML = 'Source: ' + imdRating.Source + '<br>' + 'Rated: ' + imdRating.Value;
     ratingsInfoDiv.appendChild(p_imdRating);
+
+    let p_rtRating = document.createElement('p');
+    p_rtRating.setAttribute('class', 'ratingsInfo');
+    p_rtRating.setAttribute('id', 'rtRating');
+    p_rtRating.innerHTML = 'Source: ' + rtRating.Source + '<br>' + 'Rated: ' + rtRating.Value;
+    ratingsInfoDiv.appendChild(p_rtRating);
+
+    let p_metaRating = document.createElement('p');
+    p_metaRating.setAttribute('class', 'ratingsInfo');
+    p_metaRating.setAttribute('id', 'metaRating');
+    p_metaRating.innerHTML = 'Source: ' + metaRating.Source + '<br>' + 'Rated: ' + metaRating.Value;
+    ratingsInfoDiv.appendChild(p_metaRating);    
 }
 
 
