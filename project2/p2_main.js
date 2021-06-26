@@ -186,14 +186,14 @@ function showPlotInfo(){
 
     plotInfoDiv.setAttribute('class', 'infoDiv');
 
-    let removeH3 = document.querySelector('#plotInfoH3');
+    let removeH3 = document.getElementById('plotInfoH3');
     if(removeH3 != null){
         removeH3.remove();
     }
 
     let plotInfoHeader = document.createElement('h3');
     plotInfoHeader.setAttribute('class', 'infoHeader');
-    plotInfoDiv.setAttribute('id', 'plotInfoH3');
+    plotInfoHeader.setAttribute('id', 'plotInfoH3');
     plotInfoHeader.innerHTML = 'Plot Information';
     plotInfoDiv.appendChild(plotInfoHeader);
 
@@ -224,9 +224,9 @@ function showRatingsInfo(){
 
     let ratingsInfoHeader = document.createElement('h3');
     ratingsInfoHeader.setAttribute('class', 'infoHeader');
-    ratingsInfoDiv.setAttribute('id', 'ratingsInfoH3');
+    ratingsInfoHeader.setAttribute('id', 'ratingsInfoH3');
     ratingsInfoHeader.innerHTML = 'Ratings Information';
-    plotInfoDiv.appendChild(ratingsInfoHeader);
+    ratingsInfoDiv.appendChild(ratingsInfoHeader);
 
     let removeImdRating = document.getElementById('imdRating');
     if(removeImdRating != null){
@@ -236,7 +236,7 @@ function showRatingsInfo(){
     p_imdRating.setAttribute('class', 'ratingsInfo');
     p_imdRating.setAttribute('id', 'imdRating');
     p_imdRating.innerHTML = 'Source: ' + imdRating.Source + '<br>' + 'Rated: ' + imdRating.Value;
-    plotInfoDiv.appendChild(p_imdRating);
+    ratingsInfoDiv.appendChild(p_imdRating);
 }
 
 
