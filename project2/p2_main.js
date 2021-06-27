@@ -223,7 +223,6 @@ function showRatingsInfo(){
     if(removeH3 != null){
         removeH3.remove();
     }
-
     let ratingsInfoHeader = document.createElement('h3');
     ratingsInfoHeader.setAttribute('class', 'infoHeader');
     ratingsInfoHeader.setAttribute('id', 'ratingsInfoH3');
@@ -240,12 +239,20 @@ function showRatingsInfo(){
     p_imdRating.innerHTML = 'Source: ' + imdRating.Source + '<br>' + 'Rated: ' + imdRating.Value;
     ratingsInfoDiv.appendChild(p_imdRating);
 
+    let removeRtRating = document.getElementById('rtRating');
+    if(removeRtRating != null){
+        removeRtRating.remove();
+    }
     let p_rtRating = document.createElement('p');
     p_rtRating.setAttribute('class', 'ratingsInfo');
     p_rtRating.setAttribute('id', 'rtRating');
     p_rtRating.innerHTML = 'Source: ' + rtRating.Source + '<br>' + 'Rated: ' + rtRating.Value;
     ratingsInfoDiv.appendChild(p_rtRating);
 
+    let removeMetaRating = document.getElementById('metaRating');
+    if(removeMetaRating != null){
+        removeMetaRating.remove();
+    }
     let p_metaRating = document.createElement('p');
     p_metaRating.setAttribute('class', 'ratingsInfo');
     p_metaRating.setAttribute('id', 'metaRating');
@@ -254,3 +261,4 @@ function showRatingsInfo(){
 }
 
 
+ 
