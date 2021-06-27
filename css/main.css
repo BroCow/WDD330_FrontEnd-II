@@ -297,3 +297,19 @@ textarea:focus{
 #bbPicDiv{
     text-align: center;
 }
+
+/** Week 10 Form Validation **/
+.choose{
+    display: block;
+}
+#choose:invalid{
+    border: 2px dashed red;
+}
+
+#choose:valid{
+    border: 2px solid green;
+}
+
+#choose2:invalid:required{
+    background-image: linear-gradient(to right, orange, red);
+}

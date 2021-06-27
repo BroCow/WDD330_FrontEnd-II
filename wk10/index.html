@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 10</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <nav id="nav"></nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 10</h1>
+    </header>
+ 
+     
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn">View Notes</button>
+        <button class="catBtn" id="exercisesBtn">View Exercises</button>
+        <button class="catBtn" id="questionsBtn">View Questions</button>
+    </div>
+
+    <main>
+        
+        <div class="summary">
+            <h4 id="summaryOfStudy">Summary of Study</h4>
+            <p>
+            My main focus this week was getting started on Project 2.  I'm creating an app that allows a user to 
+            enter in the title of a movie and it uses an API to provide a bunch of information about the movie entered.
+            I think I'm off to a pretty good start.  I got my fetch function set up and have the API returning the 
+            information in JSON format.  I also created the html layout of what the app will look like and added CSS, 
+            including some CSS animation using transform.
+            </p>
+            <p>
+            I read the assigned articles and took notes.  I will be implementing form validation into my app since 
+            the user does enter in information for the API to process.  The article on Fetch was also helpful, but 
+            I had actually already read it before during my research a couple weeks ago.
+            </p>
+        </div>
+
+        <section class="category_section" id="notesSection">
+            <h2>Week 10 Notes</h2>
+            
+            <div class="sectionContent">
+                <h3>MDN - Client-side Form Validation</h3>
+                <p>Makes for good user experience, but does not provide all the protection necessary</p>
+                
+                <h4>What is form validation?</h4> 
+                <hr>
+                <p>Form Validation - Restrictions on the type and format of data entered by user</p>
+                <p>Client-side: Done in browser</p>
+                <p>Server-side: Done at server</p>
+                <p>Reasons for form validation:</p>
+                <ul>
+                    <li>We want to get the right data, in the right format</li>
+                    <li>We want to protect our users data</li>
+                    <li>We want to protect ourselves</li>
+                </ul>
+                <p><strong>Never trust data entered by a user!!!</strong></p>
+
+                <h4>Different types of client-side validation</h4>
+                <hr>
+                <p>Built-in form validation - uses HTML5</p>
+                <p>JavaScript - coded and customizable</p>
+
+                <h4>Using built-in form validation</h4>
+                <hr>
+                <ul>
+                    <li>Required - specifies if field must be completed</li>
+                    <li>minlength / maxlength - how long the text string</li>
+                    <li>min / max - specifies value requirement of numbers</li>
+                    <li>Type - type of entry(email, phone, text, etc.)</li>
+                    <li>Pattern - sets pattern of data required(uppercase, lowercase, numbers)</li>
+                </ul>
+                <p>CSS :valid - activated when entry acceptable</p>
+                <p>CSS :invalid - activated when entry not acceptable</p>
+
+                <h4>Built-in form validation examples</h4>
+                <hr>
+                <p>CSS valid/invalid added to example below</p>
+                <form>
+                    <label for="choose">Do you prefer Mexican or Italian food?</label>
+                    <input class="choose" id="choose" name="i_prefer" placeholder="required" required>
+                    <br>
+                    <label for="choose2">Do you prefer Coke or Pepsi?</label>
+                    <input class="choose" id="choose2" name="i_prefer" placeholder="required/invalid" required>
+                    <button>Submit</button>
+                </form>
+                
+                
+                <h4>Validating forms using Javascript</h4>
+
+                <h5>The Constraint Validation API</h5>
+                <p>Methods and properties available for:</p>
+                <ul>
+                    <li>HTMLButtonElement - button elements</li>
+                    <li>HTMLFieldSetElement - fieldset</li>
+                    <li>HTMLInputElement - input</li>
+                    <li>HTMLOutputElement - output</li>
+                    <li>HTMLSelectElement</li>
+                    <li>HTMLTextAreaElement</li>
+                </ul>
+                <p>Available properties</p>
+                <ul>
+                    <li>validationMessage</li>
+                    <li>validity</li>
+                    <li>willValidate</li>
+                </ul>
+                <p>Available methods</p>
+                <ul>
+                    <li>checkValidity()</li>
+                    <li>setCustomValidity(message)</li>
+                </ul>
+                <p>Common Use - creating custom error messages (content and appearance)</p>
+                <form>
+                    <label for="mail">Please provide an e-mail address:</label>
+                    <input type="email" id="mail" name="mail">
+                    <button>Submit</button>
+                </form>
+                <p>Novalidate form - stops browser from displaying its own message</p>
+                <form novalidate>
+                    <p>
+                      <label for="mail">
+                        <span>Please enter an email address:</span>
+                        <input type="email" id="mail2" name="mail" required minlength="8">
+                        <p>Span element uses <q>aria-live</q> attribute to display message to everyone, including screenreaders</p>
+                        <span class="error" aria-live="polite"></span>
+                      </label>
+                    </p>
+                    <button>Submit</button>
+                </form>
+
+                <h5>Validating forms without a built-in API</h5>
+                
+            </div>
+        </section>
+
+
+        <section class="category_section" id="exercisesSection" style="display: none;">
+            <h2>Week 10 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk10Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk10Exercises_ol">
+                    <h4>h4 header</h4>
+                    <hr>
+                    <p><a href="">link</a></p>
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="questionsSection" style="display: none;">
+            <h2>Week 10 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk10Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk10Questions_ol">
+                    <h4>h4</h4>
+                    <hr>
+                    <li class="category_li">
+                        Question
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                    
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="../main.js" type="module"></script>
+    <script src="wk10.js"></script>
+    
+</body>
+</html>

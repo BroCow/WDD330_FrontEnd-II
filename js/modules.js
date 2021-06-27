@@ -1,7 +1,7 @@
 
 /** Global Variables **/
 // Arrays
-export const wkNumberArray = [1,2,3,4,5,6,7,8,9];   //just add a number to this array to make the magic happen!
+export const wkNumberArray = [1,2,3,4,5,6,7,8,9,10];   //just add a number to this array to make the magic happen!
 export const wkVarNameArray = [];
 export const wkLinkArray = [];
 
