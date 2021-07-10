@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 Portfolio - Week 11</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <nav id="nav"></nav>
+
+    <header>
+        <h1>Chris Cowan's WDD-330 Portfolio - Week 11</h1>
+    </header>
+ 
+     
+    <div class="catBtn_container">
+        <button class="catBtn" id="notesBtn">View Notes</button>
+        <button class="catBtn" id="exercisesBtn">View Exercises</button>
+        <button class="catBtn" id="questionsBtn">View Questions</button>
+    </div>
+
+    <main>
+        
+        <div class="summary">
+            <h4 id="summaryOfStudy">Summary of Study</h4>
+            <p>
+            This week I spent some time studying the team activity.  I had a hard time understanding how to get it working and had to refer to the instructors solution.  I think I'm starting to grasp it, though.
+            </p>
+            <p>I also spent some time trying to figure out how to clean up my code for my project by creating modules. I have an idea of how I'm going to do that but need to implement it.  Other than that, I worked on my bluebook project which is coming along.
+            </p>
+        </div>
+
+        <section class="category_section" id="notesSection" style="display: none;">
+            <h2>Week 11 Notes</h2>
+            
+            <div class="sectionContent">
+                <h3>H3</h3>
+                
+                <h4>H4</h4> 
+                <hr>
+                <p>Notes</p>
+                <h5>H5</h5>
+                
+            </div>
+        </section>
+
+
+        <section class="category_section" id="exercisesSection" style="display: none;">
+            <h2>Week 11 Exercises</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk11Exercises_header">Exercises</h3>
+                <ol class="category_ol" id="wk11Exercises_ol">
+                    <h4>H4</h4>
+                    <hr>
+                    
+                </ol>
+            </div>
+        </section>
+
+        <section class="category_section" id="questionsSection" style="display: none;">
+            <h2>Week 11 Questions</h2>
+            <div class="sectionContent">
+                <h3 class="category_header" id="wk11Questions_header">Questions</h3>
+
+                <ol class="category_ol" id="wk11Questions_ol">
+                    <h4>H4</h4>
+                    <hr>
+                    <li class="category_li">
+                        Something
+                        <br>
+                        <strong>Answer:  </strong>
+                    </li>
+                    
+                </ol>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="../main.js" type="module"></script>
+    <script src="wk10.js"></script>
+    
+</body>
+</html>
