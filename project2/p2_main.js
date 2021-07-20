@@ -7,6 +7,7 @@ const newSearchBtn = document.getElementById('newSearchBtn');
 const cut = document.getElementById('cut');
 const popcorn = document.getElementById('popcorn');
 
+
 animateTitle();
 
 //event handlers for button
@@ -36,6 +37,7 @@ function toggleSearchField(){
     }
     
 }
+
 newSearchBtn.addEventListener('click', toggleSearchField);
 
 function hidePopcorn(){

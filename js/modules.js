@@ -1,7 +1,7 @@
 
 /** Global Variables **/
 // Arrays
-export const wkNumberArray = [1,2,3,4,5,6,7,8,9,10];   //just add a number to this array to make the magic happen!
+export const wkNumberArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];   //just add a number to this array to make the magic happen!
 export const wkVarNameArray = [];
 export const wkLinkArray = [];
 
@@ -115,7 +115,7 @@ export function showExercises(){
             } 
             else {
                 exercises.style.display = "none";
-                exercisesBtn.innerHTML = "View Notes";
+                exercisesBtn.innerHTML = "View Exercises";
                 exercisesBtn.style.boxShadow = "0px 0px 5px black";
             }
         }
@@ -133,12 +133,12 @@ export function showQuestions(){
             const questions = document.getElementById("questionsSection");
             if(questions.style.display === "none"){
                 questions.style.display = "block";
-                questionsBtn.innerHTML = "Hide Notes";
+                questionsBtn.innerHTML = "Hide Questions";
                 questionsBtn.style.boxShadow = "0px 0px 5px yellow";
             } 
             else {
                 questions.style.display = "none";
-                questionsBtn.innerHTML = "View Notes";
+                questionsBtn.innerHTML = "View Questions";
                 questionsBtn.style.boxShadow = "0px 0px 5px black";
             }
         }

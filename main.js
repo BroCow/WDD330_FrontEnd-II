@@ -15,8 +15,8 @@ console.log(wkLinkArray);
 // Call imported function to create navigation buttons
 createNavBtns();
 const homeBtn = document.getElementById('homeBtn');
-
-
+ 
+ 
 /* Function for home button */
 function goHome(){
     location.href = "https://brocow.github.io/WDD330_FrontEnd-II/";
